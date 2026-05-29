@@ -3,163 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KOEL GROUP BD | Smart RMG & Team Tracking</title>
+    <title>KOEL GROUP BD | Leading Smart RMG Sourcing Partner</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .gradient-text { background: linear-gradient(90deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .status-dot { height: 10px; width: 10px; border-radius: 50%; display: inline-block; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .gradient-blue { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); }
+        .hero-gradient { background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.15), transparent), radial-gradient(circle at bottom left, rgba(139, 92, 246, 0.1), transparent); }
+        .card-hover:hover { transform: translateY(-10px); border-color: rgba(59, 130, 246, 0.5); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
     </style>
 </head>
-<body class="bg-[#0b0f19] text-gray-200">
+<body class="bg-[#050810] text-gray-200 hero-gradient">
 
     <!-- Navigation -->
-    <nav class="sticky top-0 z-50 glass px-6 py-4 flex justify-between items-center">
-        <div class="text-2xl font-bold gradient-text">KOEL GROUP BD</div>
-        <div class="hidden md:flex space-x-6 text-xs font-bold uppercase tracking-widest">
-            <a href="#home" class="hover:text-blue-400 transition">Home</a>
-            <a href="#team" class="hover:text-blue-400 transition">Staff Location</a>
-            <a href="#tracking" class="hover:text-blue-400 transition">Order Tracking</a>
-            <a href="#contact" class="hover:text-blue-400 transition">Inquiry</a>
+    <nav class="fixed top-0 w-full z-[100] glass border-b border-white/5 px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+            <div class="w-8 h-8 gradient-blue rounded-lg flex items-center justify-center font-bold text-white">K</div>
+            <span class="text-xl font-extrabold tracking-tighter text-white">KOEL GROUP <span class="text-blue-500">BD</span></span>
         </div>
-        <a href="https://wa.me/8801970493357" class="bg-blue-600 text-white px-5 py-2 rounded-full text-xs font-bold hover:bg-blue-700 transition">
-            Live Support
+        <div class="hidden lg:flex space-x-10 text-[11px] font-bold uppercase tracking-[0.2em] text-gray-400">
+            <a href="#home" class="hover:text-blue-500 transition">Home</a>
+            <a href="#about" class="hover:text-blue-500 transition">About</a>
+            <a href="#capabilities" class="hover:text-blue-500 transition">Capabilities</a>
+            <a href="#tracking" class="hover:text-blue-500 transition">Smart Tracking</a>
+            <a href="#contact" class="hover:text-blue-500 transition">Contact</a>
+        </div>
+        <a href="https://wa.me/8801970493357" class="gradient-blue text-white px-6 py-2 rounded-full text-xs font-bold hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] transition">
+            GET A QUOTE
         </a>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="py-20 px-6 text-center">
-        <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight">
-            Smart Sourcing <span class="gradient-text">Transparent Flow</span>
-        </h1>
-        <p class="text-gray-400 text-lg mb-10 max-w-2xl mx-auto">Connecting you directly with our team and production floor in real-time.</p>
-    </section>
-
-    <!-- Staff Location Section (NEW FEATURE) -->
-    <section id="team" class="py-16 px-6 max-w-7xl mx-auto">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-12">
-            <div>
-                <h2 class="text-3xl font-bold text-white mb-2">Staff Location Tracker</h2>
-                <p class="text-blue-400 text-sm font-medium">Real-time presence across our branches</p>
+    <section id="home" class="relative pt-40 pb-24 px-6 text-center">
+        <div class="max-w-5xl mx-auto">
+            <span class="inline-block py-1 px-4 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] font-bold uppercase tracking-widest mb-6">Innovative RMG Ecosystem</span>
+            <h1 class="text-6xl md:text-8xl font-extrabold text-white mb-8 tracking-tighter leading-none">
+                Smart Sourcing <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Redefined.</span>
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+                Empowering global fashion brands with tech-driven apparel manufacturing, transparent supply chains, and automated production flows from Bangladesh.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-5">
+                <a href="#contact" class="gradient-blue px-10 py-5 rounded-2xl font-bold text-white hover:scale-105 transition shadow-2xl shadow-blue-900/20">Explore Solutions</a>
+                <a href="#tracking" class="glass px-10 py-5 rounded-2xl font-bold text-white hover:bg-white/5 transition">Live Order Tracking</a>
             </div>
-            <div class="mt-4 md:mt-0 flex space-x-4 text-xs font-bold uppercase">
-                <span class="flex items-center"><span class="status-dot bg-green-500 mr-2"></span> On-Site</span>
-                <span class="flex items-center"><span class="status-dot bg-yellow-500 mr-2"></span> In-Transit</span>
-            </div>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-6">
-            <!-- Staff 1 -->
-            <div class="glass p-6 rounded-3xl flex items-center space-x-4 border-l-4 border-green-500">
-                <div class="w-16 h-16 bg-gray-700 rounded-full flex-shrink-0 flex items-center justify-center text-2xl"><i class="fas fa-user-tie"></i></div>
-                <div>
-                    <h4 class="font-bold text-white">Ashraful Islam</h4>
-                    <p class="text-xs text-gray-500 mb-2">Lead Merchandiser</p>
-                    <p class="text-[10px] bg-green-500/20 text-green-400 px-2 py-1 rounded inline-block">
-                        <i class="fas fa-map-marker-alt mr-1"></i> Gazipur Factory Unit
-                    </p>
-                </div>
-            </div>
-            <!-- Staff 2 -->
-            <div class="glass p-6 rounded-3xl flex items-center space-x-4 border-l-4 border-blue-500">
-                <div class="w-16 h-16 bg-gray-700 rounded-full flex-shrink-0 flex items-center justify-center text-2xl"><i class="fas fa-user-shield"></i></div>
-                <div>
-                    <h4 class="font-bold text-white">Rahat Khan</h4>
-                    <p class="text-xs text-gray-500 mb-2">Quality Manager</p>
-                    <p class="text-[10px] bg-blue-500/20 text-blue-400 px-2 py-1 rounded inline-block">
-                        <i class="fas fa-map-marker-alt mr-1"></i> Head Office, Dhaka
-                    </p>
-                </div>
-            </div>
-            <!-- Staff 3 -->
-            <div class="glass p-6 rounded-3xl flex items-center space-x-4 border-l-4 border-yellow-500">
-                <div class="w-16 h-16 bg-gray-700 rounded-full flex-shrink-0 flex items-center justify-center text-2xl"><i class="fas fa-truck"></i></div>
-                <div>
-                    <h4 class="font-bold text-white">Tanvir Ahmed</h4>
-                    <p class="text-xs text-gray-500 mb-2">Logistics Officer</p>
-                    <p class="text-[10px] bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded inline-block">
-                        <i class="fas fa-shipping-fast mr-1"></i> Chittagong Port
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Integrated Map -->
-        <div class="mt-10 glass rounded-3xl overflow-hidden h-64 w-full">
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116833.83187884218!2d90.33728815197828!3d23.780887457199147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b087026b81%3A0x8fa563bbdd5904c2!2sDhaka!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd" 
-                width="100%" height="100%" style="border:0; filter: invert(90%) hue-rotate(180deg);" allowfullscreen="" loading="lazy">
-            </iframe>
         </div>
     </section>
 
-    <!-- Order Tracking System -->
-    <section id="tracking" class="py-20 px-6 max-w-4xl mx-auto">
-        <div class="glass p-10 rounded-3xl text-center border-b-4 border-blue-600">
-            <h3 class="text-3xl font-bold text-white mb-4">Smart Order Tracking</h3>
-            <p class="text-gray-400 mb-8 text-sm">Enter Order ID to see live production status.</p>
+    <!-- Capabilities Grid (Inspired by your Automation Flow Image) -->
+    <section id="capabilities" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-white mb-4">Our Core Automation</h2>
+            <p class="text-gray-500">Managing your entire customer experience through smart systems.</p>
+        </div>
+        <div class="grid md:grid-cols-4 gap-6">
+            <div class="glass p-8 rounded-[2rem] card-hover transition duration-500">
+                <div class="w-14 h-14 bg-blue-600/20 rounded-2xl flex items-center justify-center mb-8"><i class="fas fa-microchip text-2xl text-blue-500"></i></div>
+                <h3 class="text-lg font-bold text-white mb-3 tracking-tight">ERP Integration</h3>
+                <p class="text-gray-500 text-xs leading-relaxed">Direct sync between buyer inventory and our production floor data.</p>
+            </div>
+            <div class="glass p-8 rounded-[2rem] card-hover transition duration-500 border-t-4 border-purple-600/30">
+                <div class="w-14 h-14 bg-purple-600/20 rounded-2xl flex items-center justify-center mb-8"><i class="fab fa-whatsapp text-2xl text-purple-500"></i></div>
+                <h3 class="text-lg font-bold text-white mb-3 tracking-tight">Smart Reply Flow</h3>
+                <p class="text-gray-500 text-xs leading-relaxed">Instant catalogs and price quotes via automated WhatsApp chatbot.</p>
+            </div>
+            <div class="glass p-8 rounded-[2rem] card-hover transition duration-500">
+                <div class="w-14 h-14 bg-green-600/20 rounded-2xl flex items-center justify-center mb-8"><i class="fas fa-bell text-2xl text-green-500"></i></div>
+                <h3 class="text-lg font-bold text-white mb-3 tracking-tight">Order Alerts</h3>
+                <p class="text-gray-500 text-xs leading-relaxed">Real-time notifications sent to your dashboard at every production milestone.</p>
+            </div>
+            <div class="glass p-8 rounded-[2rem] card-hover transition duration-500 border-t-4 border-blue-600/30">
+                <div class="w-14 h-14 bg-blue-400/20 rounded-2xl flex items-center justify-center mb-8"><i class="fas fa-globe text-2xl text-blue-400"></i></div>
+                <h3 class="text-lg font-bold text-white mb-3 tracking-tight">Global Logistics</h3>
+                <p class="text-gray-500 text-xs leading-relaxed">Automated port tracking and documentation management for on-time delivery.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tracking System -->
+    <section id="tracking" class="py-24 px-6">
+        <div class="max-w-4xl mx-auto glass p-12 rounded-[3rem] text-center border border-blue-500/20 relative overflow-hidden">
+            <div class="absolute -top-20 -right-20 w-64 h-64 bg-blue-600/10 blur-[80px] rounded-full"></div>
+            <h2 class="text-4xl font-extrabold text-white mb-4">Live Production Tracking</h2>
+            <p class="text-gray-500 mb-10 max-w-md mx-auto text-sm">Transparency is our priority. Enter your Order Tracking ID to see real-time progress of your apparel production.</p>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <input type="text" id="orderID" placeholder="Order ID (e.g. KG-2025)" class="bg-white/5 border border-white/10 px-6 py-4 rounded-xl text-white focus:outline-none focus:border-blue-500 w-full md:w-64">
-                <button onclick="trackOrder()" class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition">Track Status</button>
+                <input type="text" id="orderID" placeholder="Enter ID (e.g. KOEL-2025)" class="bg-white/5 border border-white/10 px-8 py-5 rounded-2xl text-white focus:outline-none focus:border-blue-500 w-full md:w-80 text-lg">
+                <button onclick="trackOrder()" class="gradient-blue text-white px-10 py-5 rounded-2xl font-bold hover:scale-105 transition shadow-xl">CHECK STATUS</button>
             </div>
-            <div id="statusResult" class="mt-8 hidden p-6 bg-blue-500/10 rounded-2xl text-blue-300 font-medium"></div>
+            <div id="statusResult" class="mt-10 hidden p-8 bg-blue-500/10 rounded-3xl border border-blue-500/20 text-blue-400 animate-pulse font-bold tracking-widest uppercase"></div>
         </div>
     </section>
 
-    <!-- Automated Inquiry Form -->
-    <section id="contact" class="py-20 px-6 bg-[#0f172a]">
-        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+    <!-- Operational Presence (Locations) -->
+    <section class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-                <h2 class="text-4xl font-extrabold text-white mb-6">Start Your <span class="gradient-text">Automated Inquiry</span></h2>
-                <p class="text-gray-400 mb-8">Submit your requirements and our staff at the nearest location will reach out to you.</p>
+                <h2 class="text-5xl font-extrabold text-white mb-8 leading-tight tracking-tighter">Strategically Located for <span class="text-blue-500">Global Excellence.</span></h2>
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-5">
+                        <div class="w-10 h-10 bg-blue-500/20 rounded-xl flex items-center justify-center text-blue-500"><i class="fas fa-map-marked-alt"></i></div>
+                        <div><h4 class="font-bold text-white">Dhaka Head Office</h4><p class="text-xs text-gray-500">Central Hub for Design, Compliance & Sourcing.</p></div>
+                    </div>
+                    <div class="flex items-start space-x-5">
+                        <div class="w-10 h-10 bg-green-500/20 rounded-xl flex items-center justify-center text-green-500"><i class="fas fa-industry"></i></div>
+                        <div><h4 class="font-bold text-white">Gazipur Industrial Unit</h4><p class="text-xs text-gray-500">Production floor with 24/7 smart monitoring.</p></div>
+                    </div>
+                    <div class="flex items-start space-x-5">
+                        <div class="w-10 h-10 bg-purple-500/20 rounded-xl flex items-center justify-center text-purple-500"><i class="fas fa-anchor"></i></div>
+                        <div><h4 class="font-bold text-white">Chittagong Port Terminal</h4><p class="text-xs text-gray-500">Integrated logistics and export management team.</p></div>
+                    </div>
+                </div>
             </div>
-            <div class="glass p-8 rounded-3xl">
-                <form action="https://formspree.io/f/mjgzllgg" method="POST" class="space-y-5">
-                    <input type="text" name="name" placeholder="Full Name" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-blue-500 outline-none">
-                    <input type="text" name="phone" placeholder="WhatsApp Number" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-blue-500 outline-none">
-                    <button type="submit" class="w-full bg-blue-600 text-white font-bold py-4 rounded-xl shadow-lg hover:bg-blue-700 transition">Submit Inquiry</button>
+            <div class="glass h-96 rounded-[3rem] overflow-hidden grayscale contrast-125 border border-white/5">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116833.83187884218!2d90.33728815197828!3d23.780887457199147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b087026b81%3A0x8fa563bbdd5904c2!2sDhaka!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inquiry Form Section -->
+    <section id="contact" class="py-24 px-6 bg-white/5">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+            <div>
+                <h2 class="text-5xl font-extrabold text-white mb-8 tracking-tighter leading-tight">Start Your <span class="text-blue-500">Production</span> Story With Us.</h2>
+                <p class="text-gray-500 mb-10 text-lg font-light leading-relaxed">Our automated CRM will capture your requirements and assign a specialized merchandiser to your project within minutes.</p>
+                <div class="grid grid-cols-2 gap-5 text-[10px] font-bold text-gray-400 uppercase tracking-widest">
+                    <div class="glass p-4 rounded-xl"><i class="fas fa-check text-blue-500 mr-2"></i> Low MOQ Options</div>
+                    <div class="glass p-4 rounded-xl"><i class="fas fa-check text-blue-500 mr-2"></i> Fast Lead Times</div>
+                </div>
+            </div>
+            <div class="glass p-10 rounded-[3rem] border-t-2 border-blue-500/50">
+                <form action="https://formspree.io/f/mjgzllgg" method="POST" class="space-y-6">
+                    <div>
+                        <input type="text" name="name" placeholder="Contact Person Name" required class="w-full bg-white/5 border border-white/10 px-6 py-4 rounded-2xl text-white focus:border-blue-500 outline-none transition">
+                    </div>
+                    <div>
+                        <input type="email" name="email" placeholder="Business Email Address" required class="w-full bg-white/5 border border-white/10 px-6 py-4 rounded-2xl text-white focus:border-blue-500 outline-none transition">
+                    </div>
+                    <div>
+                        <input type="text" name="phone" placeholder="WhatsApp Number" required class="w-full bg-white/5 border border-white/10 px-6 py-4 rounded-2xl text-white focus:border-blue-500 outline-none transition">
+                    </div>
+                    <div>
+                        <textarea name="message" placeholder="Quick Brief About Your Project" rows="3" class="w-full bg-white/5 border border-white/10 px-6 py-4 rounded-2xl text-white focus:border-blue-500 outline-none transition"></textarea>
+                    </div>
+                    <button type="submit" class="w-full gradient-blue py-5 rounded-2xl font-bold text-white tracking-widest hover:shadow-2xl transition">SUBMIT SMART INQUIRY</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Floating Smart WhatsApp Widget -->
-    <div class="fixed bottom-8 right-8 z-[100]">
-        <div id="wa-window" class="hidden glass rounded-3xl mb-4 w-80 shadow-2xl overflow-hidden">
-            <div class="bg-green-600 p-4 text-white flex items-center">
-                <i class="fab fa-whatsapp text-2xl mr-3"></i>
-                <div><p class="text-sm font-bold">KOEL GROUP Support</p><p class="text-[10px] opacity-80">Connected with Team Location</p></div>
-            </div>
-            <div class="p-4 space-y-2 bg-[#0b0f19]">
-                <a href="https://wa.me/8801970493357?text=Connect me to Dhaka Office" class="block w-full glass p-3 rounded-xl text-xs hover:bg-white/10 flex justify-between items-center">
-                    <span>Contact Head Office</span> <i class="fas fa-building text-[10px] opacity-50"></i>
-                </a>
-                <a href="https://wa.me/8801970493357?text=Connect me to Gazipur Factory" class="block w-full glass p-3 rounded-xl text-xs hover:bg-white/10 flex justify-between items-center">
-                    <span>Contact Factory Team</span> <i class="fas fa-industry text-[10px] opacity-50"></i>
-                </a>
-            </div>
+    <!-- Smart Footer -->
+    <footer class="py-20 px-6 border-t border-white/5 text-center">
+        <div class="mb-10 flex justify-center space-x-6 text-gray-500">
+            <a href="#" class="hover:text-blue-500 transition"><i class="fab fa-linkedin-in text-xl"></i></a>
+            <a href="#" class="hover:text-blue-500 transition"><i class="fab fa-facebook-f text-xl"></i></a>
+            <a href="#" class="hover:text-blue-500 transition"><i class="fab fa-instagram text-xl"></i></a>
         </div>
-        <button onclick="document.getElementById('wa-window').classList.toggle('hidden')" class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-white text-3xl shadow-lg hover:scale-110 transition">
-            <i class="fab fa-whatsapp"></i>
-        </button>
-    </div>
-
-    <script>
-        function trackOrder() {
-            const id = document.getElementById('orderID').value;
-            const res = document.getElementById('statusResult');
-            res.classList.remove('hidden');
-            if(id === "") { res.innerText = "❌ Enter a valid Tracking ID."; }
-            else { res.innerHTML = "🔍 Order <b>" + id + "</b> Status: <br><span class='text-white text-xl uppercase'>Fabric Quality Check Stage</span>"; }
-        }
-    </script>
-
-    <footer class="py-12 border-t border-white/5 text-center text-gray-600 text-[10px] uppercase font-bold tracking-widest">
-        &copy; 2025 KOEL GROUP BD. Global Operations Tracking Active.
+        <p class="text-[10px] font-bold text-gray-600 uppercase tracking-[0.4em] mb-4">&copy; 2025 KOEL GROUP BD. ALL RIGHTS RESERVED.</p>
+        <p class="text-[9px] text-gray-700 italic">Built with Smart Automation Technology</p>
     </footer>
 
-</body>
-</html>
+    <!-- Smart WhatsApp Widget (Interactive) -->
+    <div class="fixed bottom-10 right-10 z-[100]">
+        <div id="wa-card" class="hidden glass rounded-[2.5rem] mb-6 w-80 shadow-2xl overflow-hidden animate-in fade-in slide-in-from-bottom-10 duration-500">
+            <div class="gradient-blue p-6 text-white">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-white/20 rounded-2xl
