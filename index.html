@@ -1,484 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KOEL GROUP BD | Premium Apparel Sourcing Institution</title>
-
-  <style>
-    :root {
-      --navy: #071421;
-      --navy-soft: #102437;
-      --gold: #c9a45c;
-      --ivory: #f5efe2;
-      --text: #d8d4ca;
-      --muted: #9fa7ad;
-      --dark: #03070c;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: "Inter", Arial, sans-serif;
-      background: var(--dark);
-      color: var(--text);
-      line-height: 1.7;
-    }
-
-    header {
-      min-height: 100vh;
-      background:
-        linear-gradient(rgba(3,7,12,0.68), rgba(3,7,12,0.92)),
-        radial-gradient(circle at top right, rgba(201,164,92,0.18), transparent 35%),
-        linear-gradient(135deg, #071421, #03070c);
-      display: flex;
-      align-items: center;
-      padding: 40px 8%;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .nav {
-      position: absolute;
-      top: 28px;
-      left: 8%;
-      right: 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 5;
-    }
-
-    .logo {
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--ivory);
-      letter-spacing: 2px;
-    }
-
-    .logo span {
-      color: var(--gold);
-    }
-
-    .nav a {
-      color: var(--text);
-      text-decoration: none;
-      margin-left: 24px;
-      font-size: 14px;
-    }
-
-    .hero {
-      max-width: 850px;
-      z-index: 2;
-    }
-
-    .eyebrow {
-      color: var(--gold);
-      letter-spacing: 3px;
-      font-size: 13px;
-      text-transform: uppercase;
-      margin-bottom: 18px;
-    }
-
-    h1 {
-      font-family: Georgia, serif;
-      font-size: clamp(46px, 7vw, 88px);
-      line-height: 1.05;
-      color: var(--ivory);
-      margin-bottom: 24px;
-      font-weight: 500;
-    }
-
-    .hero p {
-      font-size: 18px;
-      max-width: 680px;
-      color: var(--text);
-      margin-bottom: 34px;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 14px 24px;
-      border-radius: 40px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.3s ease;
-      display: inline-block;
-    }
-
-    .btn-primary {
-      background: var(--gold);
-      color: #101010;
-    }
-
-    .btn-secondary {
-      border: 1px solid rgba(245,239,226,0.35);
-      color: var(--ivory);
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      opacity: 0.9;
-    }
-
-    section {
-      padding: 90px 8%;
-    }
-
-    .section-title {
-      max-width: 760px;
-      margin-bottom: 48px;
-    }
-
-    .section-title span {
-      color: var(--gold);
-      text-transform: uppercase;
-      font-size: 13px;
-      letter-spacing: 2px;
-    }
-
-    .section-title h2 {
-      font-family: Georgia, serif;
-      color: var(--ivory);
-      font-size: clamp(32px, 5vw, 54px);
-      line-height: 1.15;
-      margin-top: 10px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
-    }
-
-    .card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.025));
-      border: 1px solid rgba(255,255,255,0.08);
-      padding: 30px;
-      border-radius: 20px;
-      min-height: 230px;
-    }
-
-    .card h3 {
-      color: var(--ivory);
-      font-size: 22px;
-      margin-bottom: 14px;
-    }
-
-    .card p {
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .highlight {
-      background:
-        linear-gradient(rgba(7,20,33,0.92), rgba(7,20,33,0.96)),
-        radial-gradient(circle at center, rgba(201,164,92,0.16), transparent 45%);
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 22px;
-      margin-top: 40px;
-    }
-
-    .stat {
-      border-left: 2px solid var(--gold);
-      padding-left: 20px;
-    }
-
-    .stat strong {
-      display: block;
-      color: var(--ivory);
-      font-size: 34px;
-      font-family: Georgia, serif;
-    }
-
-    .stat span {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .cta {
-      text-align: center;
-      background: linear-gradient(135deg, #071421, #101010);
-      border-top: 1px solid rgba(255,255,255,0.08);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .cta h2 {
-      font-family: Georgia, serif;
-      color: var(--ivory);
-      font-size: clamp(34px, 5vw, 58px);
-      margin-bottom: 20px;
-    }
-
-    .cta p {
-      max-width: 700px;
-      margin: 0 auto 30px;
-      color: var(--text);
-    }
-
-    footer {
-      padding: 36px 8%;
-      background: #020407;
-      color: var(--muted);
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-      font-size: 14px;
-    }
-
-    .whatsapp {
-      position: fixed;
-      right: 24px;
-      bottom: 24px;
-      width: 58px;
-      height: 58px;
-      background: #25D366;
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      font-size: 28px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
-      z-index: 99;
-    }
-
-    @media (max-width: 768px) {
-      .nav {
-        align-items: flex-start;
-      }
-
-      .nav-links {
-        display: none;
-      }
-
-      header {
-        padding-top: 130px;
-      }
-
-      section {
-        padding: 70px 6%;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-  <header>
-    <nav class="nav">
-      <div class="logo">KOEL <span>GROUP BD</span></div>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#capabilities">Capabilities</a>
-        <a href="#compliance">Compliance</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-
-    <div class="hero">
-      <div class="eyebrow">Premium Apparel Sourcing Institution</div>
-      <h1>Global Textile Craftsmanship With Institutional Precision.</h1>
-      <p>
-        KOEL GROUP BD connects international fashion brands with premium apparel
-        sourcing, technical manufacturing, compliance-driven operations, and
-        long-term production partnerships from Bangladesh.
-      </p>
-      <div class="buttons">
-        <a class="btn btn-primary" href="https://wa.me/8801XXXXXXXXX" target="_blank">Contact on WhatsApp</a>
-        <a class="btn btn-secondary" href="#capabilities">Explore Capabilities</a>
-      </div>
-    </div>
-  </header>
-
-  <section id="about">
-    <div class="section-title">
-      <span>Who We Are</span>
-      <h2>A globally mature sourcing ecosystem for premium apparel brands.</h2>
-    </div>
-
-    <div class="grid">
-      <div class="card">
-        <h3>Institutional Sourcing</h3>
-        <p>Structured buyer intelligence, executive communication, and relationship-driven sourcing management.</p>
-      </div>
-      <div class="card">
-        <h3>Technical Manufacturing</h3>
-        <p>Premium knitwear and apparel production supported by disciplined sampling, development, and delivery systems.</p>
-      </div>
-      <div class="card">
-        <h3>Buyer Confidence</h3>
-        <p>Professional operations designed for European and global fashion buyers seeking reliability and consistency.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="capabilities" class="highlight">
-    <div class="section-title">
-      <span>Capabilities</span>
-      <h2>From sampling to commercial production, built for global standards.</h2>
-    </div>
-
-    <div class="grid">
-      <div class="card">
-        <h3>Technical Sampling</h3>
-        <p>Low-friction sample development with clear tracking, feedback loops, and buyer-ready presentation.</p>
-      </div>
-      <div class="card">
-        <h3>Production Planning</h3>
-        <p>Commercial forecasting, slot planning, pipeline visibility, and scalable apparel manufacturing coordination.</p>
-      </div>
-      <div class="card">
-        <h3>Premium Knitwear</h3>
-        <p>Textile craftsmanship, yarn knowledge, and apparel execution for international fashion collections.</p>
-      </div>
-      <div class="card">
-        <h3>Executive Communication</h3>
-        <p>Structured buyer outreach, pipeline reviews, and institutional-grade business development systems.</p>
-      </div>
-    </div>
-
-    <div class="stats">
-      <div class="stat">
-        <strong>B2B</strong>
-        <span>Global sourcing focus</span>
-      </div>
-      <div class="stat">
-        <strong>360°</strong>
-        <span>Sampling to shipment support</span>
-      </div>
-      <div class="stat">
-        <strong>EU</strong>
-        <span>Buyer-facing communication style</span>
-      </div>
-      <div class="stat">
-        <strong>BD</strong>
-        <span>Bangladesh manufacturing base</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="compliance">
-    <div class="section-title">
-      <span>Compliance & Trust</span>
-      <h2>Risk-conscious sourcing with premium operational discipline.</h2>
-    </div>
-
-    <div class="grid">
-      <div class="card">
-        <h3>Compliance Awareness</h3>
-        <p>Aligned with responsible sourcing expectations including BSCI, WRAP, OEKO-TEX, and buyer-specific standards.</p>
-      </div>
-      <div class="card">
-        <h3>Risk Mitigation</h3>
-        <p>Clear escalation logic, buyer qualification, documentation discipline, and transparent production coordination.</p>
-      </div>
-      <div class="card">
-        <h3>Partnership Culture</h3>
-        <p>Built for long-term relationships with brands, retailers, sourcing teams, and strategic apparel buyers.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta" id="contact">
-    <h2>Let’s Build Your Next Apparel Program.</h2>
-    <p>
-      Connect with KOEL GROUP BD for premium sourcing, technical sampling,
-      production planning, and long-term apparel manufacturing partnerships.
-    </p>
-    <a class="btn btn-primary" href="https://wa.me/8801XXXXXXXXX?text=Hello%20KOEL%20GROUP%20BD%2C%20I%20would%20like%20to%20discuss%20apparel%20sourcing." target="_blank">
-      Start WhatsApp Conversation
-    </a>
-  </section>
-
-  <footer>
-    <div>© 2026 KOEL GROUP BD. All rights reserved.</div>
-    <div>KOEL Modish Apparels × JAYQO Textile & Accessories Co. Ltd.</div>
-  </footer>
-
-  <a class="whatsapp" href="https://wa.me/8801XXXXXXXXX?text=Hello%20KOEL%20GROUP%20BD%2C%20I%20am%20interested%20in%20your%20apparel%20sourcing%20services." target="_blank">
-    ☎
-  </a>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KOEL GROUP BD | Professional RMG Partner</title>
+    <title>KOEL GROUP BD | Smart RMG Automation & Sourcing</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .gradient-text { background: linear-gradient(90deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
 </head>
-<body class="bg-gray-50 font-sans">
+<body class="bg-[#0b0f19] text-gray-200">
 
-    <!-- Header Section -->
-    <nav class="bg-white shadow-md p-4 flex justify-between items-center sticky top-0 z-50">
-        <h1 class="text-2xl font-bold text-blue-900">KOEL GROUP BD</h1>
-        <div class="hidden md:flex space-x-6">
-            <a href="#" class="hover:text-blue-600">Home</a>
-            <a href="#services" class="hover:text-blue-600">Services</a>
-            <a href="#contact" class="hover:text-blue-600">Contact</a>
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 glass px-6 py-4 flex justify-between items-center">
+        <div class="text-2xl font-bold gradient-text">KOEL GROUP BD</div>
+        <div class="hidden md:flex space-x-8 text-sm font-medium">
+            <a href="#home" class="hover:text-blue-400 transition">Home</a>
+            <a href="#capabilities" class="hover:text-blue-400 transition">Capabilities</a>
+            <a href="#products" class="hover:text-blue-400 transition">Products</a>
+            <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
         </div>
-        <a href="https://wa.me/8801970493357" class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600">
-            <i class="fab fa-whatsapp"></i> WhatsApp Us
+        <a href="https://wa.me/8801970493357" class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm hover:bg-blue-700 transition flex items-center">
+            <i class="fab fa-whatsapp mr-2"></i> Live Chat
         </a>
     </nav>
 
     <!-- Hero Section -->
-    <section class="bg-blue-900 text-white py-20 px-6 text-center">
-        <h2 class="text-4xl md:text-6xl font-extrabold mb-4">Your Trusted RMG Manufacturing Partner</h2>
-        <p class="text-lg md:text-xl opacity-90 mb-8 text-blue-200">Quality, Commitment, and Professionalism in Every Stitch.</p>
-        <a href="#contact" class="bg-white text-blue-900 px-8 py-3 rounded-lg font-bold text-lg hover:bg-blue-100 transition">Get a Quote</a>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-16 px-6 max-w-6xl mx-auto">
-        <h3 class="text-3xl font-bold text-center mb-12">Our Core Services</h3>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500">
-                <i class="fas fa-tshirt text-4xl text-blue-500 mb-4"></i>
-                <h4 class="text-xl font-bold mb-2">Garments Manufacturing</h4>
-                <p class="text-gray-600">High-quality knit and woven products for global brands.</p>
-            </div>
-            <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500">
-                <i class="fas fa-industry text-4xl text-blue-500 mb-4"></i>
-                <h4 class="text-xl font-bold mb-2">Textile Sourcing</h4>
-                <p class="text-gray-600">Premium fabric sourcing and quality control management.</p>
-            </div>
-            <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500">
-                <i class="fas fa-truck text-4xl text-blue-500 mb-4"></i>
-                <h4 class="text-xl font-bold mb-2">Supply Chain</h4>
-                <p class="text-gray-600">On-time delivery with automated tracking systems.</p>
+    <section id="home" class="relative py-24 px-6 text-center overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/10 blur-[120px] rounded-full"></div>
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <span class="text-blue-400 text-sm font-bold tracking-widest uppercase mb-4 block">Smart RMG Solutions</span>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight">
+                Global Sourcing with <span class="gradient-text">Automated Flow</span>
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+                KOEL GROUP BD connects international fashion brands with premium apparel sourcing, compliance-driven manufacturing, and automated supply chain tracking.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-600/20">Start Inquiry</a>
+                <a href="#capabilities" class="glass text-white px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition">Our Capabilities</a>
             </div>
         </div>
     </section>
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/8801XXXXXXXXX?text=Hello,%20I%20want%20to%20discuss%20an%20order." 
-       class="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:scale-110 transition-transform z-50">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <!-- Automation Features (Grid inspired by your 1st Image) -->
+    <section class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-4 gap-6">
+            <div class="glass p-8 rounded-3xl hover:border-blue-500/50 transition group">
+                <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                    <i class="fas fa-robot text-blue-400 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Smart Reply</h3>
+                <p class="text-gray-400 text-sm">Automated WhatsApp flow for instant pricing & catalogs.</p>
+            </div>
+            <div class="glass p-8 rounded-3xl hover:border-blue-500/50 transition">
+                <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-6">
+                    <i class="fas fa-chart-line text-purple-400 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Order Tracking</h3>
+                <p class="text-gray-400 text-sm">Real-time production tracking for global buyers.</p>
+            </div>
+            <div class="glass p-8 rounded-3xl hover:border-blue-500/50 transition">
+                <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mb-6">
+                    <i class="fas fa-shield-alt text-green-400 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Compliance</h3>
+                <p class="text-gray-400 text-sm">Automated audit and quality control management.</p>
+            </div>
+            <div class="glass p-8 rounded-3xl hover:border-blue-500/50 transition">
+                <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mb-6">
+                    <i class="fas fa-envelope-open-text text-orange-400 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">ERP Sync</h3>
+                <p class="text-gray-400 text-sm">Direct integration with buyer inventory systems.</p>
+            </div>
+        </div>
+    </section>
 
-    <!-- Footer -->
-    <footer id="contact" class="bg-gray-900 text-white py-10 px-6 text-center">
-        <p class="mb-4">&copy; 2024 KOEL GROUP BD. All Rights Reserved.</p>
-        <p>Email: <a href="mailto:info@koelgroupbd.com" class="text-blue-400">info@koelgroupbd.com</a></p>
+    <!-- Inquiry Section -->
+    <section id="contact" class="py-20 px-6 bg-[#0f172a]">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl font-extrabold text-white mb-6">Start Your <span class="gradient-text">Automated Journey</span> Today</h2>
+                <p class="text-gray-400 mb-8 leading-relaxed">Fill out the form and our smart system will assign a dedicated merchandiser to your project within 10 minutes.</p>
+                <div class="space-y-4">
+                    <div class="flex items-center text-gray-300"><i class="fas fa-check-circle text-blue-500 mr-3"></i> 24/7 WhatsApp Support</div>
+                    <div class="flex items-center text-gray-300"><i class="fas fa-check-circle text-blue-500 mr-3"></i> Automated Order Invoices</div>
+                    <div class="flex items-center text-gray-300"><i class="fas fa-check-circle text-blue-500 mr-3"></i> Digital Product Catalogs</div>
+                </div>
+            </div>
+            <!-- Automated Form -->
+            <div class="glass p-8 rounded-3xl">
+                <form action="https://formspree.io/f/YOUR_ID" method="POST" class="space-y-5">
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-gray-500 mb-2">Full Name</label>
+                        <input type="text" name="name" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-blue-500 focus:outline-none transition">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-gray-500 mb-2">Company Email</label>
+                        <input type="email" name="email" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-blue-500 focus:outline-none transition">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-gray-500 mb-2">WhatsApp Number</label>
+                        <input type="text" name="phone" placeholder="+880..." required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-blue-500 focus:outline-none transition">
+                    </div>
+                    <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-4 rounded-xl hover:opacity-90 transition shadow-lg shadow-blue-600/30">
+                        Submit Smart Inquiry
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Widget -->
+    <div class="fixed bottom-8 right-8 z-[100]">
+        <div id="wa-bubble" class="hidden glass p-4 rounded-2xl mb-4 w-72 shadow-2xl animate-bounce">
+            <p class="text-sm text-gray-300">👋 Hello! How can KOEL GROUP help with your garments order today?</p>
+            <a href="https://wa.me/8801970493357" class="mt-3 block text-center bg-green-600 text-xs font-bold py-2 rounded-lg text-white">Chat Now</a>
+        </div>
+        <button onclick="document.getElementById('wa-bubble').classList.toggle('hidden')" class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-white text-3xl shadow-lg shadow-green-500/40 hover:scale-110 transition">
+            <i class="fab fa-whatsapp"></i>
+        </button>
+    </div>
+
+    <footer class="py-12 border-t border-white/5 text-center text-gray-500 text-sm">
+        <p>&copy; 2025 KOEL GROUP BD. Built with Smart Automation.</p>
     </footer>
 
 </body>
