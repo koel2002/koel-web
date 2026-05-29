@@ -1,6 +1,424 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KOEL GROUP BD | Premium Apparel Sourcing Institution</title>
+
+  <style>
+    :root {
+      --navy: #071421;
+      --navy-soft: #102437;
+      --gold: #c9a45c;
+      --ivory: #f5efe2;
+      --text: #d8d4ca;
+      --muted: #9fa7ad;
+      --dark: #03070c;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", Arial, sans-serif;
+      background: var(--dark);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    header {
+      min-height: 100vh;
+      background:
+        linear-gradient(rgba(3,7,12,0.68), rgba(3,7,12,0.92)),
+        radial-gradient(circle at top right, rgba(201,164,92,0.18), transparent 35%),
+        linear-gradient(135deg, #071421, #03070c);
+      display: flex;
+      align-items: center;
+      padding: 40px 8%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .nav {
+      position: absolute;
+      top: 28px;
+      left: 8%;
+      right: 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 5;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--ivory);
+      letter-spacing: 2px;
+    }
+
+    .logo span {
+      color: var(--gold);
+    }
+
+    .nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin-left: 24px;
+      font-size: 14px;
+    }
+
+    .hero {
+      max-width: 850px;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      letter-spacing: 3px;
+      font-size: 13px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(46px, 7vw, 88px);
+      line-height: 1.05;
+      color: var(--ivory);
+      margin-bottom: 24px;
+      font-weight: 500;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 680px;
+      color: var(--text);
+      margin-bottom: 34px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 24px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s ease;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #101010;
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(245,239,226,0.35);
+      color: var(--ivory);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    section {
+      padding: 90px 8%;
+    }
+
+    .section-title {
+      max-width: 760px;
+      margin-bottom: 48px;
+    }
+
+    .section-title span {
+      color: var(--gold);
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 2px;
+    }
+
+    .section-title h2 {
+      font-family: Georgia, serif;
+      color: var(--ivory);
+      font-size: clamp(32px, 5vw, 54px);
+      line-height: 1.15;
+      margin-top: 10px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.025));
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 30px;
+      border-radius: 20px;
+      min-height: 230px;
+    }
+
+    .card h3 {
+      color: var(--ivory);
+      font-size: 22px;
+      margin-bottom: 14px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .highlight {
+      background:
+        linear-gradient(rgba(7,20,33,0.92), rgba(7,20,33,0.96)),
+        radial-gradient(circle at center, rgba(201,164,92,0.16), transparent 45%);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 22px;
+      margin-top: 40px;
+    }
+
+    .stat {
+      border-left: 2px solid var(--gold);
+      padding-left: 20px;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--ivory);
+      font-size: 34px;
+      font-family: Georgia, serif;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .cta {
+      text-align: center;
+      background: linear-gradient(135deg, #071421, #101010);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .cta h2 {
+      font-family: Georgia, serif;
+      color: var(--ivory);
+      font-size: clamp(34px, 5vw, 58px);
+      margin-bottom: 20px;
+    }
+
+    .cta p {
+      max-width: 700px;
+      margin: 0 auto 30px;
+      color: var(--text);
+    }
+
+    footer {
+      padding: 36px 8%;
+      background: #020407;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      width: 58px;
+      height: 58px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 28px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+      z-index: 99;
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      header {
+        padding-top: 130px;
+      }
+
+      section {
+        padding: 70px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav class="nav">
+      <div class="logo">KOEL <span>GROUP BD</span></div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#compliance">Compliance</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <div class="hero">
+      <div class="eyebrow">Premium Apparel Sourcing Institution</div>
+      <h1>Global Textile Craftsmanship With Institutional Precision.</h1>
+      <p>
+        KOEL GROUP BD connects international fashion brands with premium apparel
+        sourcing, technical manufacturing, compliance-driven operations, and
+        long-term production partnerships from Bangladesh.
+      </p>
+      <div class="buttons">
+        <a class="btn btn-primary" href="https://wa.me/8801XXXXXXXXX" target="_blank">Contact on WhatsApp</a>
+        <a class="btn btn-secondary" href="#capabilities">Explore Capabilities</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="section-title">
+      <span>Who We Are</span>
+      <h2>A globally mature sourcing ecosystem for premium apparel brands.</h2>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Institutional Sourcing</h3>
+        <p>Structured buyer intelligence, executive communication, and relationship-driven sourcing management.</p>
+      </div>
+      <div class="card">
+        <h3>Technical Manufacturing</h3>
+        <p>Premium knitwear and apparel production supported by disciplined sampling, development, and delivery systems.</p>
+      </div>
+      <div class="card">
+        <h3>Buyer Confidence</h3>
+        <p>Professional operations designed for European and global fashion buyers seeking reliability and consistency.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="capabilities" class="highlight">
+    <div class="section-title">
+      <span>Capabilities</span>
+      <h2>From sampling to commercial production, built for global standards.</h2>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Technical Sampling</h3>
+        <p>Low-friction sample development with clear tracking, feedback loops, and buyer-ready presentation.</p>
+      </div>
+      <div class="card">
+        <h3>Production Planning</h3>
+        <p>Commercial forecasting, slot planning, pipeline visibility, and scalable apparel manufacturing coordination.</p>
+      </div>
+      <div class="card">
+        <h3>Premium Knitwear</h3>
+        <p>Textile craftsmanship, yarn knowledge, and apparel execution for international fashion collections.</p>
+      </div>
+      <div class="card">
+        <h3>Executive Communication</h3>
+        <p>Structured buyer outreach, pipeline reviews, and institutional-grade business development systems.</p>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <strong>B2B</strong>
+        <span>Global sourcing focus</span>
+      </div>
+      <div class="stat">
+        <strong>360°</strong>
+        <span>Sampling to shipment support</span>
+      </div>
+      <div class="stat">
+        <strong>EU</strong>
+        <span>Buyer-facing communication style</span>
+      </div>
+      <div class="stat">
+        <strong>BD</strong>
+        <span>Bangladesh manufacturing base</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="compliance">
+    <div class="section-title">
+      <span>Compliance & Trust</span>
+      <h2>Risk-conscious sourcing with premium operational discipline.</h2>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Compliance Awareness</h3>
+        <p>Aligned with responsible sourcing expectations including BSCI, WRAP, OEKO-TEX, and buyer-specific standards.</p>
+      </div>
+      <div class="card">
+        <h3>Risk Mitigation</h3>
+        <p>Clear escalation logic, buyer qualification, documentation discipline, and transparent production coordination.</p>
+      </div>
+      <div class="card">
+        <h3>Partnership Culture</h3>
+        <p>Built for long-term relationships with brands, retailers, sourcing teams, and strategic apparel buyers.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="contact">
+    <h2>Let’s Build Your Next Apparel Program.</h2>
+    <p>
+      Connect with KOEL GROUP BD for premium sourcing, technical sampling,
+      production planning, and long-term apparel manufacturing partnerships.
+    </p>
+    <a class="btn btn-primary" href="https://wa.me/8801XXXXXXXXX?text=Hello%20KOEL%20GROUP%20BD%2C%20I%20would%20like%20to%20discuss%20apparel%20sourcing." target="_blank">
+      Start WhatsApp Conversation
+    </a>
+  </section>
+
+  <footer>
+    <div>© 2026 KOEL GROUP BD. All rights reserved.</div>
+    <div>KOEL Modish Apparels × JAYQO Textile & Accessories Co. Ltd.</div>
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/8801XXXXXXXXX?text=Hello%20KOEL%20GROUP%20BD%2C%20I%20am%20interested%20in%20your%20apparel%20sourcing%20services." target="_blank">
+    ☎
+  </a>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KOEL GROUP BD | Professional RMG Partner</title>
