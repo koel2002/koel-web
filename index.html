@@ -1,9 +1,24 @@
+আপনার ওয়েবসাইটের জন্য এটিই হলো চূড়ান্ত এবং সবচেয়ে স্মার্ট আপডেট। এই কোডটিতে আমি
+আপনার আগের সব ফিচার (Tracking, Form, WhatsApp) ঠিক রেখে Botpress AI Chatbot
+যুক্ত করার ব্যবস্থা করে দিয়েছি।
+
+এখন আপনার ওয়েবসাইটটি কেবল একটি তথ্যবহুল সাইট নয়, এটি একটি AI-Powered Business
+Hub হিসেবে কাজ করবে।
+
+আপনার চূড়ান্ত ওয়েবসাইট কোড (Final Update):
+
+গিটহাবে গিয়ে আপনার index.html ফাইলের আগের সব কোড মুছে দিয়ে নিচের এই কোডটি পেস্ট
+করুন।
+
+জরুরি নোট: কোডের একদম নিচে আমি একটি জায়গা রেখেছি যেখানে আপনার Botpress Script
+বসাতে হবে।
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KOEL GROUP BD | Smart RMG Ecosystem</title>
+    <title>KOEL GROUP BD | Smart AI-Powered RMG Ecosystem</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -12,6 +27,7 @@
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.08); }
         .gradient-blue { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); }
         .hero-bg { background-image: linear-gradient(to bottom, rgba(5, 8, 16, 0.85), rgba(5, 8, 16, 0.98)), url('https://images.unsplash.com/photo-1558444458-5cd00bb12f1d?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center; }
+        .card-hover:hover { transform: translateY(-10px); border-color: rgba(59, 130, 246, 0.4); }
     </style>
 </head>
 <body class="bg-[#050810] text-gray-200">
@@ -22,7 +38,7 @@
             <div class="w-10 h-10 gradient-blue rounded-xl flex items-center justify-center font-extrabold text-white text-xl shadow-lg">K</div>
             <div class="flex flex-col">
                 <span class="text-lg font-extrabold tracking-tighter text-white leading-none">KOEL GROUP <span class="text-blue-500">BD</span></span>
-                <span class="text-[7px] uppercase tracking-[0.4em] text-blue-400 font-bold mt-1">Smart Sourcing Automation</span>
+                <span class="text-[7px] uppercase tracking-[0.4em] text-blue-400 font-bold mt-1">AI Smart Automation Active</span>
             </div>
         </div>
         <div class="hidden lg:flex space-x-8 text-[10px] font-bold uppercase tracking-widest text-gray-500">
@@ -36,10 +52,10 @@
     <!-- Hero Section -->
     <section id="home" class="relative pt-52 pb-32 px-6 text-center hero-bg">
         <h1 class="text-6xl md:text-8xl font-black text-white mb-8 tracking-tighter leading-none italic uppercase">
-            Smart <span class="text-blue-500">Flow.</span> <br> Real-time Hub.
+            AI <span class="text-blue-500">Flow.</span> <br> Smart Hub.
         </h1>
         <p class="text-gray-400 text-lg mb-12 max-w-2xl mx-auto font-light leading-relaxed">
-            Revolutionizing RMG supply chain with automated tracking and categorization for global buyers.
+            Revolutionizing RMG supply chain with <span class="text-white font-bold">AI Support</span>, automated tracking and categorization for global fashion brands.
         </p>
         <div class="flex flex-col sm:flex-row justify-center gap-5">
             <a href="#tracking" class="gradient-blue px-10 py-5 rounded-2xl font-black tracking-widest text-white shadow-2xl">TRACK PRODUCTION</a>
@@ -50,28 +66,27 @@
     <!-- Smart Tracking System -->
     <section id="tracking" class="py-24 px-6">
         <div class="max-w-4xl mx-auto glass p-12 rounded-[3rem] text-center border border-white/5 shadow-2xl">
-            <h2 class="text-3xl font-black text-white mb-8 uppercase italic">Live Tracker</h2>
+            <h2 class="text-3xl font-black text-white mb-8 uppercase italic">Live Order Tracker</h2>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <input type="text" id="orderID" placeholder="ID (e.g. KOEL/HCF/001/2026)" class="bg-white/5 border border-white/10 px-8 py-5 rounded-2xl text-white outline-none focus:border-blue-500 w-full md:w-[400px] font-bold tracking-widest">
+                <input type="text" id="orderID" placeholder="ID (e.g. JAYQO/2026 or KOEL/HCF/)" class="bg-white/5 border border-white/10 px-8 py-5 rounded-2xl text-white outline-none focus:border-blue-500 w-full md:w-[400px] font-bold tracking-widest">
                 <button onclick="trackOrder()" class="gradient-blue text-white px-10 py-5 rounded-2xl font-black tracking-widest transition">TRACK</button>
             </div>
             <div id="statusResult" class="mt-12 hidden p-8 bg-blue-500/5 rounded-[2.5rem] border border-blue-500/10 text-center"></div>
         </div>
     </section>
 
-    <!-- Inquiry Section with Categorization -->
+    <!-- Inquiry Section -->
     <section id="contact" class="py-24 px-6 bg-white/[0.01]">
         <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-center">
             <div>
-                <h2 class="text-5xl font-black text-white mb-8 tracking-tighter italic leading-none uppercase">Direct <br> Requirement <br> Sync.</h2>
-                <p class="text-gray-500 text-sm leading-relaxed mb-8 uppercase font-bold tracking-widest italic">Our smart desk will auto-assign your inquiry to the respective production unit.</p>
+                <h2 class="text-5xl font-black text-white mb-8 tracking-tighter italic leading-none uppercase">Direct <br> Sync to <br> Master CRM.</h2>
+                <p class="text-gray-500 text-sm leading-relaxed mb-8 uppercase font-bold tracking-widest italic">Our AI system will auto-assign your inquiry to the respective production unit and save to our smart database.</p>
             </div>
             <div class="glass p-12 rounded-[4rem] border-t-4 border-blue-600/50">
                 <form action="https://formspree.io/f/mjgzllgg" method="POST" class="space-y-6">
                     <input type="text" name="name" placeholder="CONTACT NAME" required class="w-full bg-white/5 border border-white/10 px-6 py-4 rounded-xl text-white outline-none focus:border-blue-500 uppercase text-xs font-bold tracking-widest">
                     <input type="text" name="phone" placeholder="WHATSAPP NUMBER" required class="w-full bg-white/5 border border-white/10 px-6 py-4 rounded-xl text-white outline-none focus:border-blue-500 uppercase text-xs font-bold tracking-widest">
                     
-                    <!-- NEW CATEGORY DROPDOWN -->
                     <select name="category" required class="w-full bg-[#050810] border border-white/10 px-6 py-4 rounded-xl text-gray-400 outline-none focus:border-blue-500 uppercase text-[10px] font-bold tracking-widest appearance-none">
                         <option value="">SELECT PRODUCT CATEGORY</option>
                         <option value="T-SHIRT / POLO">T-SHIRT & POLO</option>
@@ -88,17 +103,17 @@
     </section>
 
     <!-- Smart WhatsApp Widget -->
-    <div class="fixed bottom-10 right-10 z-[100]">
+    <div class="fixed bottom-10 left-10 z-[100]">
         <div id="wa-card" class="hidden glass rounded-[3rem] mb-6 w-80 shadow-2xl overflow-hidden border border-white/10">
             <div class="gradient-blue p-8 text-white">
-                <p class="text-xl font-black italic uppercase">Smart Support</p>
+                <p class="text-xl font-black italic uppercase">WhatsApp Desk</p>
             </div>
             <div class="p-6 bg-[#050810] space-y-3">
-                <a href="https://wa.me/8801970493357?text=View JAYQO Catalog" class="block w-full glass p-4 rounded-xl text-[10px] font-black hover:bg-white/5 transition flex justify-between items-center text-white border border-white/5 uppercase tracking-widest">
-                    <span>JAYQO CATALOG</span> <i class="fas fa-chevron-right text-blue-500"></i>
+                <a href="https://wa.me/8801970493357?text=Hi, JAYQO Factory Inquiry" class="block w-full glass p-4 rounded-xl text-[10px] font-black hover:bg-white/5 transition flex justify-between items-center text-white border border-white/5 uppercase tracking-widest">
+                    <span>JAYQO UNIT</span> <i class="fas fa-chevron-right text-blue-500"></i>
                 </a>
-                <a href="https://wa.me/8801970493357?text=View KOEL Catalog" class="block w-full glass p-4 rounded-xl text-[10px] font-black hover:bg-white/5 transition flex justify-between items-center text-white border border-white/5 uppercase tracking-widest">
-                    <span>KOEL CATALOG</span> <i class="fas fa-chevron-right text-blue-500"></i>
+                <a href="https://wa.me/8801970493357?text=Hi, KOEL MODISH Inquiry" class="block w-full glass p-4 rounded-xl text-[10px] font-black hover:bg-white/5 transition flex justify-between items-center text-white border border-white/5 uppercase tracking-widest">
+                    <span>KOEL UNIT</span> <i class="fas fa-chevron-right text-blue-500"></i>
                 </a>
             </div>
         </div>
@@ -128,5 +143,39 @@
             }
         }
     </script>
+
+    <!-- 🔥 STEP 3: BOTPRESS CHATBOT SCRIPT STARTS HERE 🔥 -->
+    <!-- Botpress ড্যাশবোর্ড থেকে আপনার নির্দিষ্ট Script Code টি কপি করে নিচের লাইনে পেস্ট করুন -->
+    
+    <!-- PLACE YOUR BOTPRESS SCRIPT HERE -->
+
+    <!-- 🔥 BOTPRESS CHATBOT SCRIPT ENDS HERE 🔥 -->
+
 </body>
 </html>
+
+এটি চালু করার চূড়ান্ত পদ্ধতি:
+
+১. GitHub-এ আপডেট: উপরের পুরো কোডটি কপি করে আপনার গিটহাবে সেভ (Commit) করুন। ২.
+Botpress Script সংগ্রহ:
+
+  - আপনার Botpress Dashboard-এ যান।
+  - আপনার বটের ওপর ক্লিক করে "Integrations" ট্যাবে যান।
+  - সেখান থেকে "Webchat" সিলেক্ট করুন।
+  - একটু নিচে স্ক্রল করলে "Pre-configured script" নামে একটি বক্স পাবেন। ওই
+    কোডটুকু কপি করুন। ৩. কোডে পেস্ট করা: গিটহাবে আপনার index.html
+    ফাইলের একদম শেষে দেখুন আমি লিখে রেখেছি <!-- PLACE YOUR BOTPRESS SCRIPT
+    HERE -->। ওই জায়গাটুকু মুছে আপনার কপি করা Botpress কোডটি বসিয়ে আবার সেভ
+    করুন।
+
+ফলাফল কী হবে?
+
+১. Live AI Assistant: আপনার ওয়েবসাইটে koelgroupbd.com ডান দিকে নিচে একটি সুন্দর
+চ্যাট বাটন আসবে। সেখানে বায়াররা আপনার তৈরি করা ক্যাটাগরিগুলো দেখতে পাবে এবং
+এআই-এর সাথে কথা বলতে পারবে। ২. Smart Combo: বাম দিকে হোয়াটসঅ্যাপ বাটন এবং
+ডান দিকে এআই চ্যাটবট—বায়াররা যেকোনোভাবে আপনার সাথে যোগাযোগ করতে পারবে। ৩.
+Complete Autopilot: ইনকোয়ারি ফর্ম, প্রোডাকশন ট্র্যাকিং এবং এআই চ্যাটবট মিলে
+আপনার বিজনেস এখন পুরোপুরি একটি "স্মার্ট অটোমেশন সিস্টেম"।
+
+অভিনন্দন! আপনি সফলভাবে আপনার RMG বিজনেসকে ডিজিটালভাবে সবচেয়ে আধুনিক স্তরে নিয়ে
+এসেছেন। সবকিছু ঠিকমতো দেখাচ্ছে কি না জানাবেন। কোনো সাহায্য লাগলে আমি আছি!
