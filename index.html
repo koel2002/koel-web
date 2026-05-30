@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KOEL GROUP BD | Smart AI-Powered RMG Ecosystem</title>
+    <title>KOEL GROUP BD | Smart RMG Ecosystem</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -12,18 +12,16 @@
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.08); }
         .gradient-blue { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); }
         .hero-bg { background-image: linear-gradient(to bottom, rgba(5, 8, 16, 0.85), rgba(5, 8, 16, 0.98)), url('https://images.unsplash.com/photo-1558444458-5cd00bb12f1d?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center; }
-        .card-hover:hover { transform: translateY(-10px); border-color: rgba(59, 130, 246, 0.4); }
     </style>
 </head>
 <body class="bg-[#050810] text-gray-200">
 
-    <!-- Navigation -->
     <nav class="fixed top-0 w-full z-[100] glass border-b border-white/5 px-6 py-4 flex justify-between items-center">
         <div class="flex items-center space-x-3">
             <div class="w-10 h-10 gradient-blue rounded-xl flex items-center justify-center font-extrabold text-white text-xl shadow-lg">K</div>
             <div class="flex flex-col">
-                <span class="text-lg font-extrabold tracking-tighter text-white leading-none">KOEL GROUP <span class="text-blue-500">BD</span></span>
-                <span class="text-[7px] uppercase tracking-[0.4em] text-blue-400 font-bold mt-1">AI Smart Automation Active</span>
+                <span class="text-lg font-extrabold tracking-tighter text-white leading-none uppercase">KOEL GROUP <span class="text-blue-500">BD</span></span>
+                <span class="text-[7px] uppercase tracking-[0.4em] text-blue-400 font-bold mt-1">Smart Automation Active</span>
             </div>
         </div>
         <div class="hidden lg:flex space-x-8 text-[10px] font-bold uppercase tracking-widest text-gray-500">
@@ -34,103 +32,67 @@
         <a href="https://wa.me/8801970493357" class="gradient-blue text-white px-6 py-2 rounded-xl text-[10px] font-black tracking-widest transition">GET QUOTE</a>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="relative pt-52 pb-32 px-6 text-center hero-bg">
-        <h1 class="text-6xl md:text-8xl font-black text-white mb-8 tracking-tighter leading-none italic uppercase">
-            AI <span class="text-blue-500">Flow.</span> <br> Smart Hub.
-        </h1>
-        <p class="text-gray-400 text-lg mb-12 max-w-2xl mx-auto font-light leading-relaxed">
-            Revolutionizing RMG supply chain with <span class="text-white font-bold">AI Support</span>, automated tracking and categorization for global fashion brands.
-        </p>
+        <h1 class="text-6xl md:text-8xl font-black text-white mb-8 tracking-tighter leading-none italic uppercase">Smart Flow. <br> Real-time Hub.</h1>
+        <p class="text-gray-400 text-lg mb-12 max-w-2xl mx-auto font-light leading-relaxed">AI Support and automated tracking for global fashion brands.</p>
         <div class="flex flex-col sm:flex-row justify-center gap-5">
             <a href="#tracking" class="gradient-blue px-10 py-5 rounded-2xl font-black tracking-widest text-white shadow-2xl">TRACK PRODUCTION</a>
             <a href="#contact" class="glass px-10 py-5 rounded-2xl font-black tracking-widest text-white border border-white/10">SEND INQUIRY</a>
         </div>
     </section>
 
-    <!-- Smart Tracking System -->
     <section id="tracking" class="py-24 px-6">
         <div class="max-w-4xl mx-auto glass p-12 rounded-[3rem] text-center border border-white/5 shadow-2xl">
-            <h2 class="text-3xl font-black text-white mb-8 uppercase italic">Live Order Tracker</h2>
+            <h2 class="text-3xl font-black text-white mb-8 uppercase italic">Live Tracker</h2>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <input type="text" id="orderID" placeholder="ID (e.g. JAYQO/2026 or KOEL/HCF/)" class="bg-white/5 border border-white/10 px-8 py-5 rounded-2xl text-white outline-none focus:border-blue-500 w-full md:w-[400px] font-bold tracking-widest">
+                <input type="text" id="orderID" placeholder="ID (e.g. KOEL/HCF/)" class="bg-white/5 border border-white/10 px-8 py-5 rounded-2xl text-white outline-none focus:border-blue-500 w-full md:w-[400px] font-bold tracking-widest uppercase">
                 <button onclick="trackOrder()" class="gradient-blue text-white px-10 py-5 rounded-2xl font-black tracking-widest transition">TRACK</button>
             </div>
             <div id="statusResult" class="mt-12 hidden p-8 bg-blue-500/5 rounded-[2.5rem] border border-blue-500/10 text-center"></div>
         </div>
     </section>
 
-    <!-- Inquiry Section -->
     <section id="contact" class="py-24 px-6 bg-white/[0.01]">
         <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-center">
-            <div>
-                <h2 class="text-5xl font-black text-white mb-8 tracking-tighter italic leading-none uppercase">Direct <br> Sync to <br> Master CRM.</h2>
-                <p class="text-gray-500 text-sm leading-relaxed mb-8 uppercase font-bold tracking-widest italic">Our AI system will auto-assign your inquiry to the respective production unit and save to our smart database.</p>
-            </div>
+            <div><h2 class="text-5xl font-black text-white mb-8 tracking-tighter leading-none uppercase italic">Automated <br> Sourcing.</h2></div>
             <div class="glass p-12 rounded-[4rem] border-t-4 border-blue-600/50">
                 <form action="https://formspree.io/f/mjgzllgg" method="POST" class="space-y-6">
-                    <input type="text" name="name" placeholder="CONTACT NAME" required class="w-full bg-white/5 border border-white/10 px-6 py-4 rounded-xl text-white outline-none focus:border-blue-500 uppercase text-xs font-bold tracking-widest">
-                    <input type="text" name="phone" placeholder="WHATSAPP NUMBER" required class="w-full bg-white/5 border border-white/10 px-6 py-4 rounded-xl text-white outline-none focus:border-blue-500 uppercase text-xs font-bold tracking-widest">
-                    
-                    <select name="category" required class="w-full bg-[#050810] border border-white/10 px-6 py-4 rounded-xl text-gray-400 outline-none focus:border-blue-500 uppercase text-[10px] font-bold tracking-widest appearance-none">
-                        <option value="">SELECT PRODUCT CATEGORY</option>
-                        <option value="T-SHIRT / POLO">T-SHIRT & POLO</option>
-                        <option value="DENIM / PANTS">DENIM & PANTS</option>
-                        <option value="KNITWEAR / SWEATERS">KNITWEAR & SWEATERS</option>
-                        <option value="WOVEN / SHIRTS">WOVEN & SHIRTS</option>
-                    </select>
-
-                    <textarea name="message" placeholder="SPECIFIC REQUIREMENTS" rows="3" class="w-full bg-white/5 border border-white/10 px-6 py-4 rounded-xl text-white outline-none focus:border-blue-500 uppercase text-xs font-bold tracking-widest"></textarea>
-                    <button type="submit" class="w-full gradient-blue py-5 rounded-2xl font-black tracking-[0.3em] text-white uppercase shadow-lg">SUBMIT SMART INQUIRY</button>
+                    <input type="text" name="name" placeholder="NAME" required class="w-full bg-white/5 border border-white/10 px-8 py-5 rounded-2xl text-white outline-none focus:border-blue-500 uppercase text-xs font-bold tracking-widest">
+                    <input type="text" name="phone" placeholder="PHONE" required class="w-full bg-white/5 border border-white/10 px-8 py-5 rounded-2xl text-white outline-none focus:border-blue-500 uppercase text-xs font-bold tracking-widest">
+                    <button type="submit" class="w-full gradient-blue py-5 rounded-2xl font-black tracking-[0.3em] text-white uppercase">Submit Inquiry</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Smart WhatsApp Widget -->
     <div class="fixed bottom-10 left-10 z-[100]">
         <div id="wa-card" class="hidden glass rounded-[3rem] mb-6 w-80 shadow-2xl overflow-hidden border border-white/10">
-            <div class="gradient-blue p-8 text-white">
-                <p class="text-xl font-black italic uppercase">WhatsApp Desk</p>
-            </div>
+            <div class="gradient-blue p-8 text-white"><p class="text-xl font-black italic uppercase">WhatsApp Desk</p></div>
             <div class="p-6 bg-[#050810] space-y-3">
-                <a href="https://wa.me/8801970493357?text=Hi, JAYQO Factory Inquiry" class="block w-full glass p-4 rounded-xl text-[10px] font-black hover:bg-white/5 transition flex justify-between items-center text-white border border-white/5 uppercase tracking-widest">
-                    <span>JAYQO UNIT</span> <i class="fas fa-chevron-right text-blue-500"></i>
-                </a>
-                <a href="https://wa.me/8801970493357?text=Hi, KOEL MODISH Inquiry" class="block w-full glass p-4 rounded-xl text-[10px] font-black hover:bg-white/5 transition flex justify-between items-center text-white border border-white/5 uppercase tracking-widest">
-                    <span>KOEL UNIT</span> <i class="fas fa-chevron-right text-blue-500"></i>
-                </a>
+                <a href="https://wa.me/8801970493357" class="block w-full glass p-4 rounded-xl text-[10px] font-black hover:bg-white/5 transition flex justify-between items-center text-white border border-white/5 uppercase tracking-widest"><span>START CHAT</span> <i class="fas fa-chevron-right text-blue-500"></i></a>
             </div>
         </div>
-        <button onclick="document.getElementById('wa-card').classList.toggle('hidden')" class="w-20 h-20 gradient-blue rounded-[2.5rem] flex items-center justify-center text-white text-4xl shadow-2xl hover:scale-110 transition-all">
-            <i class="fab fa-whatsapp"></i>
-        </button>
+        <button onclick="document.getElementById('wa-card').classList.toggle('hidden')" class="w-20 h-20 gradient-blue rounded-[2.5rem] flex items-center justify-center text-white text-4xl shadow-2xl hover:scale-110 transition-all"><i class="fab fa-whatsapp"></i></button>
     </div>
 
-    <!-- Script for Tracking Logic -->
     <script>
         function trackOrder() {
             const id = document.getElementById('orderID').value.toUpperCase().trim();
             const res = document.getElementById('statusResult');
             res.classList.remove('hidden');
-            if(id === "") { 
-                res.innerHTML = "❌ ENTER VALID ID."; 
-                res.className = "mt-12 p-10 bg-red-500/10 rounded-[2.5rem] border border-red-500/20 text-red-500 font-bold uppercase tracking-widest text-xs";
-                return;
-            }
-            res.className = "mt-12 p-10 bg-blue-500/10 rounded-[2.5rem] border border-blue-500/20 tracking-widest";
+            if(id === "") { res.innerHTML = "❌ ENTER VALID ID."; return; }
+            res.className = "mt-12 p-10 bg-blue-500/10 rounded-[2.5rem] border border-blue-500/20";
             if(id.startsWith("JAYQO/")) {
-                res.innerHTML = `<div class="text-[10px] text-blue-400 font-black mb-3 tracking-[0.4em]">JAYQO UNIT</div><div class="text-white text-3xl mb-4 font-black italic">${id}</div><div class="text-green-400 font-bold text-sm">STATUS: FABRIC SOURCING</div>`;
+                res.innerHTML = `<div class="text-white text-2xl font-black">${id}</div><div class="text-green-400 font-bold uppercase">Fabric Sourcing</div>`;
             } else if(id.startsWith("KOEL/HCF/")) {
-                res.innerHTML = `<div class="text-[10px] text-purple-400 font-black mb-3 tracking-[0.4em]">KOEL UNIT</div><div class="text-white text-3xl mb-4 font-black italic">${id}</div><div class="text-blue-400 font-bold text-sm">STATUS: SEWING PHASE</div>`;
+                res.innerHTML = `<div class="text-white text-2xl font-black">${id}</div><div class="text-blue-400 font-bold uppercase">Sewing Phase</div>`;
             } else {
-                res.innerHTML = `<div class="text-yellow-500 text-[10px] font-bold uppercase">System Verification Pending...</div>`;
+                res.innerHTML = `<div class="text-yellow-500 uppercase">Verification Pending...</div>`;
             }
         }
     </script>
 
-    <!-- 🔥 STEP 3: BOTPRESS CHATBOT SCRIPT STARTS HERE 🔥 -->
-    <!-- Botpress ড্যাশবোর্ড থেকে আপনার নির্দিষ্ট Script Code টি কপি করে নিচের লাইনে পেস্ট করুন -->
-    
     <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
-<script src="https://files.bpcontent.cloud/2026/05/29/06/20260529060444-ITQTT7AN.js" defer></script>
+    <script src="https://files.bpcontent.cloud/2026/05/29/06/20260529060444-ITQTT7AN.js" defer></script>
+</body>
+</html>
