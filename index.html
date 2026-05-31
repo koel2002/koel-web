@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KOEL GROUP BD | Advanced AI RMG Hub</title>
+    <title>KOEL GROUP BD | Advanced AI Garment Sourcing Ecosystem</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700;800&display=swap" rel="stylesheet">
@@ -16,13 +16,13 @@
 </head>
 <body class="text-gray-300">
 
-    <!-- Premium Navigation -->
+    <!-- Navigation -->
     <nav class="fixed top-0 w-full z-[100] backdrop-blur-xl border-b border-white/5 px-6 py-5 flex justify-between items-center">
         <div class="flex items-center space-x-3">
-            <img src="logo.png" alt="KOEL" class="h-8 w-auto" onerror="this.style.display='none'">
+            <img src="logo.png" alt="KOEL" class="h-10 w-auto" onerror="this.style.display='none'">
             <span class="text-xl font-extrabold tracking-tighter text-white uppercase">KOEL GROUP <span class="text-blue-500">BD</span></span>
         </div>
-        <a href="https://wa.me/8801970493357" class="bg-white text-black px-6 py-2 rounded-full text-[10px] font-black tracking-widest hover:bg-blue-600 hover:text-white transition uppercase">Partner Support</a>
+        <a href="https://wa.me/8801970493357" class="bg-white text-black px-6 py-2 rounded-full text-[10px] font-black tracking-widest hover:bg-blue-600 hover:text-white transition uppercase">PARTNER SUPPORT</a>
     </nav>
 
     <!-- Hero Section -->
@@ -34,27 +34,27 @@
         </div>
     </section>
 
-    <!-- Production Tracking -->
+    <!-- Operational Control (Tracking) -->
     <section id="tracking" class="py-20 px-6">
         <div class="max-w-4xl mx-auto bg-white/5 p-12 rounded-[3rem] border border-white/5 text-center glow">
             <h2 class="text-3xl font-black text-white mb-8 italic uppercase tracking-widest text-center">Operation Control</h2>
             <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
-                <input type="text" id="orderID" placeholder="INPUT ID CODE" class="bg-black border border-white/10 px-8 py-5 rounded-2xl text-white focus:border-blue-500 w-full md:w-[400px] font-bold text-center uppercase">
+                <input type="text" id="orderID" placeholder="INPUT ID CODE" class="bg-black border border-white/10 px-8 py-5 rounded-2xl text-white focus:border-blue-500 w-full md:w-[400px] font-bold text-center uppercase tracking-widest">
                 <button onclick="trackOrder()" class="bg-white text-black px-10 py-5 rounded-2xl font-black tracking-widest hover:bg-blue-600 hover:text-white transition uppercase">Execute</button>
             </div>
             <div id="statusResult" class="mt-10 hidden p-8 bg-blue-500/10 rounded-[2.5rem] border border-blue-500/20 text-center font-bold tracking-widest uppercase text-xs"></div>
         </div>
     </section>
 
-    <!-- Inquiry Sync (Tally Form) -->
-    <section id="contact" class="py-20 px-6">
-        <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+    <!-- CRM Sync (Tally Form) -->
+    <section id="contact" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
             <div>
-                <h2 class="text-5xl font-black text-white mb-6 italic uppercase tracking-tighter leading-none">Sync to <br> Master CRM.</h2>
-                <p class="text-gray-500 text-xs font-bold uppercase tracking-widest leading-loose">Data synced to Global Hub for instant merchandiser assignment and bulk pricing.</p>
+                <h2 class="text-6xl font-black text-white mb-8 tracking-tighter leading-none italic uppercase">Sync to <br> Master CRM.</h2>
+                <p class="text-gray-500 text-xs font-bold uppercase tracking-widest leading-loose">Data synced to Global Hub for instant merchandiser assignment.</p>
                 <p class="text-white font-bold mt-8 tracking-widest">+880 1970-493357</p>
             </div>
-            <div class="ai-border glow">
+            <div class="ai-border shadow-2xl glow">
                 <div class="ai-card p-1 overflow-hidden h-[600px]">
                     <!-- আপনার নতুন Tally Form ID VLD1by এখানে সঠিকভাবে বসানো হয়েছে -->
                     <iframe data-tally-src="https://tally.so/embed/VLD1by?hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="100%" frameborder="0" title="KOEL Sync"></iframe>
@@ -64,13 +64,13 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 text-center text-[8px] font-bold text-gray-700 uppercase tracking-[0.6em] border-t border-white/5">
-        &copy; 2025 KOEL GROUP BD // AI CORE v2.0 // SMART RMG ECOSYSTEM
+    <footer class="py-20 text-center border-t border-white/5">
+        <p class="text-[8px] font-bold text-gray-700 uppercase tracking-[0.8em]">&copy; 2025 KOEL GROUP BD // AI CORE v2.0 // SMART RMG HUB</p>
     </footer>
 
     <!-- চ্যাট বাটন (WhatsApp) -->
     <div class="fixed bottom-10 left-10 z-[100]">
-        <a href="https://wa.me/8801970493357" class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-white text-2xl shadow-2xl hover:scale-110 transition animate-bounce"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://wa.me/8801970493357" class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-white text-2xl shadow-2xl hover:scale-110 transition"><i class="fab fa-whatsapp"></i></a>
     </div>
 
     <!-- Scripts -->
@@ -79,20 +79,20 @@
             const id = document.getElementById('orderID').value.toUpperCase().trim();
             const res = document.getElementById('statusResult');
             res.classList.remove('hidden');
-            if(id === "") { res.innerHTML = "❌ ERROR: INVALID ID"; return; }
-            res.className = "mt-10 p-8 bg-blue-500/5 rounded-[2.5rem] border border-blue-500/20";
+            if(id === "") { res.innerHTML = "<span class='text-red-500 font-bold'>ERROR: INVALID CODE</span>"; return; }
+            res.className = "mt-10 p-8 bg-blue-500/10 rounded-[2.5rem] border border-blue-500/20";
             if(id.startsWith("JAYQO/")) {
                 res.innerHTML = `<div class="text-white text-3xl font-black mb-2 italic">${id}</div><div class="text-blue-400">STATUS: AI VERIFIED // FABRIC SOURCING</div>`;
             } else if(id.startsWith("KOEL/HCF/")) {
                 res.innerHTML = `<div class="text-white text-3xl font-black mb-2 italic">${id}</div><div class="text-purple-400">STATUS: PRODUCTION ACTIVE // SEWING PHASE</div>`;
             } else {
-                res.innerHTML = `<div class="text-yellow-500 italic">SYSTEM OVERLOAD: MANUAL SYNC REQUIRED FOR ${id}</div>`;
+                res.innerHTML = `<div class="text-yellow-500 italic uppercase">Sync required for ${id}</div>`;
             }
         }
     </script>
     <script async src="https://tally.so/widgets/embed.js"></script>
     
-    <!-- Botpress AI Smart Desk Script -->
+    <!-- Botpress AI Core Scripts -->
     <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
     <script src="https://files.bpcontent.cloud/2026/05/31/00/20260531001126-F10XE7L5.js" defer></script>
 </body>
