@@ -3,85 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KOEL GROUP BD | Smart AI RMG Ecosystem</title>
+    <title>KOEL GROUP BD | Advanced AI Garment Sourcing Ecosystem</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.08); }
-        .gradient-blue { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); }
-        .hero-bg { background-image: linear-gradient(to bottom, rgba(5, 8, 16, 0.85), rgba(5, 8, 16, 0.98)), url('https://images.unsplash.com/photo-1558444458-5cd00bb12f1d?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; background: #02040a; }
+        .ai-border { position: relative; border-radius: 2rem; background: linear-gradient(to right, #1e40af, #9333ea); padding: 2px; }
+        .ai-card { background: #050810; border-radius: calc(2rem - 2px); }
+        .glow { box-shadow: 0 0 30px rgba(59, 130, 246, 0.15); }
+        .hero-mesh { background: radial-gradient(circle at 50% -20%, #1e40af44, transparent), radial-gradient(circle at 0% 100%, #9333ea22, transparent); }
     </style>
 </head>
-<body class="bg-[#050810] text-gray-200">
+<body class="text-gray-300 hero-mesh">
 
-    <nav class="fixed top-0 w-full z-[100] glass border-b border-white/5 px-6 py-4 flex justify-between items-center">
+    <!-- Premium Navigation -->
+    <nav class="fixed top-0 w-full z-[100] backdrop-blur-xl border-b border-white/5 px-6 py-5 flex justify-between items-center">
         <div class="flex items-center space-x-3">
-            <!-- লোগো ইমেজ (নিশ্চিত করুন গিটহাবে logo.png ফাইলটি আছে) -->
-            <img src="logo.png" alt="KOEL Logo" class="h-10 w-auto object-contain" onerror="this.style.display='none'">
-            <div class="flex flex-col">
-                <span class="text-lg font-extrabold tracking-tighter text-white leading-none uppercase">KOEL GROUP <span class="text-blue-500">BD</span></span>
-                <span class="text-[7px] uppercase tracking-[0.4em] text-blue-400 font-bold mt-1">Smart Automation Active</span>
+            <img src="logo.png" alt="KOEL" class="h-10 w-auto" onerror="this.style.display='none'">
+            <div>
+                <span class="text-xl font-extrabold tracking-tighter text-white uppercase">KOEL GROUP <span class="text-blue-500">BD</span></span>
+                <div class="flex items-center space-x-1"><span class="h-1 w-1 bg-green-500 rounded-full animate-pulse"></span> <span class="text-[7px] uppercase tracking-[0.3em] text-gray-500">AI Sourcing Active</span></div>
             </div>
         </div>
-        <div class="hidden lg:flex space-x-8 text-[10px] font-bold uppercase tracking-widest text-gray-500">
-            <a href="#home" class="hover:text-blue-500 transition">Home</a>
-            <a href="#tracking" class="hover:text-blue-500 transition">Tracking</a>
-            <a href="#contact" class="hover:text-blue-500 transition">Inquiry</a>
+        <div class="hidden lg:flex space-x-8 text-[10px] font-bold uppercase tracking-widest text-gray-400">
+            <a href="#home" class="hover:text-white transition">Core</a>
+            <a href="#ai-engine" class="hover:text-white transition">AI Engine</a>
+            <a href="#tracking" class="hover:text-white transition">Tracking</a>
+            <a href="#contact" class="hover:text-white transition">Sync</a>
         </div>
-        <a href="https://wa.me/8801970493357" class="gradient-blue text-white px-6 py-2 rounded-xl text-[10px] font-black tracking-widest transition">GET QUOTE</a>
+        <a href="https://wa.me/8801970493357" class="bg-white text-black px-6 py-2 rounded-full text-[10px] font-black tracking-widest hover:bg-blue-500 hover:text-white transition">PARTNER LOGIN</a>
     </nav>
 
-    <section id="home" class="relative pt-52 pb-32 px-6 text-center hero-bg">
-        <h1 class="text-6xl md:text-8xl font-black text-white mb-8 tracking-tighter leading-none italic uppercase">Smart Flow. <br> Global Hub.</h1>
-        <p class="text-gray-400 text-lg mb-12 max-w-2xl mx-auto font-light leading-relaxed italic">AI Support and real-time automated tracking for global partners.</p>
-        <div class="flex flex-col sm:flex-row justify-center gap-5">
-            <a href="#tracking" class="gradient-blue px-10 py-5 rounded-2xl font-black tracking-widest text-white shadow-2xl">TRACK PRODUCTION</a>
-            <a href="#contact" class="glass px-10 py-5 rounded-2xl font-black tracking-widest text-white border border-white/10">SEND INQUIRY</a>
+    <!-- Hero: AI Hub -->
+    <section id="home" class="relative pt-52 pb-32 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <div class="inline-flex items-center space-x-2 py-1 px-3 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[9px] font-bold uppercase mb-8 tracking-widest">
+                <i class="fas fa-bolt"></i> <span>Powered by Large Language Models</span>
+            </div>
+            <h1 class="text-6xl md:text-9xl font-black text-white mb-8 tracking-tighter leading-none">
+                AI <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">SOURCING.</span> <br> AUTOPILOT.
+            </h1>
+            <p class="text-gray-500 text-lg md:text-xl mb-12 max-w-2xl mx-auto font-light leading-relaxed uppercase tracking-tighter">
+                Accelerating the RMG supply chain through <span class="text-white">Predictive Intelligence</span> and real-time operational transparency.
+            </p>
+            <div class="flex justify-center space-x-4">
+                <a href="#tracking" class="bg-blue-600 p-[1px] rounded-2xl glow"><div class="bg-blue-600 text-white px-10 py-5 rounded-2xl font-black tracking-widest text-sm uppercase">Live Tracker</div></a>
+                <a href="#contact" class="border border-white/10 text-white px-10 py-5 rounded-2xl font-black tracking-widest text-sm uppercase hover:bg-white/5 transition">Start Sync</a>
+            </div>
         </div>
     </section>
 
+    <!-- AI Engine Capabilities -->
+    <section id="ai-engine" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-3 gap-10">
+            <div class="ai-border"><div class="ai-card p-10 h-full">
+                <i class="fas fa-brain text-blue-500 text-4xl mb-8"></i>
+                <h3 class="text-xl font-bold text-white mb-4 uppercase tracking-tighter italic">Predictive Pricing</h3>
+                <p class="text-gray-500 text-xs leading-loose">Our AI analyzes market trends and raw material costs to provide you with the most competitive instant quotes.</p>
+            </div></div>
+            <div class="ai-border"><div class="ai-card p-10 h-full">
+                <i class="fas fa-project-diagram text-purple-500 text-4xl mb-8"></i>
+                <h3 class="text-xl font-bold text-white mb-4 uppercase tracking-tighter italic">Automated Logistics</h3>
+                <p class="text-gray-500 text-xs leading-loose">End-to-end shipment monitoring with AI-driven delay risk assessment for on-time global delivery.</p>
+            </div></div>
+            <div class="ai-border"><div class="ai-card p-10 h-full">
+                <i class="fas fa-fingerprint text-green-500 text-4xl mb-8"></i>
+                <h3 class="text-xl font-bold text-white mb-4 uppercase tracking-tighter italic">Smart Compliance</h3>
+                <p class="text-gray-500 text-xs leading-loose">Real-time factory audit data streaming directly to buyer dashboards for 100% transparency.</p>
+            </div></div>
+        </div>
+    </section>
+
+    <!-- Enhanced Tracking -->
     <section id="tracking" class="py-24 px-6">
-        <div class="max-w-4xl mx-auto glass p-12 rounded-[3rem] text-center border border-white/5 shadow-2xl">
-            <h2 class="text-3xl font-black text-white mb-8 uppercase italic">Live Tracker</h2>
-            <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <input type="text" id="orderID" placeholder="ID (e.g. KOEL/HCF/)" class="bg-white/5 border border-white/10 px-8 py-5 rounded-2xl text-white outline-none focus:border-blue-500 w-full md:w-[400px] font-bold tracking-widest uppercase">
-                <button onclick="trackOrder()" class="gradient-blue text-white px-10 py-5 rounded-2xl font-black tracking-widest transition shadow-lg">TRACK</button>
+        <div class="max-w-5xl mx-auto bg-gradient-to-b from-blue-900/20 to-transparent p-16 rounded-[4rem] border border-white/5 text-center glow">
+            <h2 class="text-5xl font-black text-white mb-4 tracking-tighter italic uppercase">Operation Control</h2>
+            <p class="text-blue-500 text-[10px] font-bold uppercase tracking-[0.6em] mb-12 italic">Real-time production data access</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <input type="text" id="orderID" placeholder="INPUT ID CODE" class="bg-black border border-white/10 px-8 py-6 rounded-2xl text-white focus:border-blue-500 w-full md:w-[450px] font-bold tracking-widest text-center">
+                <button onclick="trackOrder()" class="bg-white text-black px-12 py-6 rounded-2xl font-black tracking-widest hover:bg-blue-600 hover:text-white transition shadow-2xl">EXECUTE</button>
             </div>
-            <div id="statusResult" class="mt-12 hidden p-10 bg-blue-500/5 rounded-[2.5rem] border border-blue-500/10 text-center"></div>
+            <div id="statusResult" class="mt-12 hidden p-10 bg-white/5 rounded-[3rem] border border-white/10 text-center transition-all"></div>
         </div>
     </section>
 
-    <section id="contact" class="py-24 px-6 bg-white/[0.01]">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+    <!-- AI Sync Section -->
+    <section id="contact" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
             <div>
-                <h2 class="text-5xl font-black text-white mb-8 tracking-tighter italic leading-none uppercase">Requirement <br> Sync.</h2>
-                <div class="flex items-center space-x-4"><p class="text-white font-bold tracking-widest">+880 1970-493357</p></div>
+                <h2 class="text-6xl font-black text-white mb-8 tracking-tighter leading-none italic uppercase">Connect to <br> Master CRM.</h2>
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-4"><div class="w-2 h-2 bg-blue-500 rounded-full shadow-[0_0_10px_#3b82f6]"></div><p class="text-xs uppercase font-bold tracking-widest">Instant Database Entry</p></div>
+                    <div class="flex items-center space-x-4"><div class="w-2 h-2 bg-purple-500 rounded-full shadow-[0_0_10px_#9333ea]"></div><p class="text-xs uppercase font-bold tracking-widest">AI Merchandiser Assignment</p></div>
+                </div>
             </div>
-            <!-- Tally Form Embed -->
-            <div class="glass p-2 rounded-[3rem] border-t-4 border-blue-600/50 overflow-hidden h-[600px] shadow-2xl">
-                <iframe data-tally-src="https://tally.so/embed/EkMJG2?hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="100%" frameborder="0" title="KOEL Inquiry"></iframe>
+            <div class="ai-border shadow-2xl glow">
+                <div class="ai-card p-2 overflow-hidden h-[600px]">
+                    <iframe data-tally-src="https://tally.so/embed/EkMJG2?hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="100%" frameborder="0" title="KOEL Sync"></iframe>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="py-20 text-center border-t border-white/5">
+        <p class="text-[8px] font-bold text-gray-700 uppercase tracking-[0.8em]">&copy; 2025 KOEL GROUP BD // AI CORE v2.0 // ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <!-- Smart AI & WhatsApp Actions -->
+    <div class="fixed bottom-10 right-10 z-[100] flex flex-col items-center space-y-4">
+        <a href="https://wa.me/8801970493357" class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl shadow-2xl hover:scale-110 transition"><i class="fab fa-whatsapp"></i></a>
+    </div>
+
+    <!-- Scripts -->
     <script>
         function trackOrder() {
             const id = document.getElementById('orderID').value.toUpperCase().trim();
             const res = document.getElementById('statusResult');
             res.classList.remove('hidden');
-            if(id === "") { res.innerHTML = "❌ ENTER VALID ID."; return; }
-            res.className = "mt-12 p-10 bg-blue-500/10 rounded-[2.5rem] border border-blue-500/20";
+            if(id === "") { res.innerHTML = "<span class='text-red-500'>ERROR: NULL ID</span>"; return; }
+            
+            res.className = "mt-12 p-10 bg-blue-500/5 rounded-[3rem] border border-blue-500/20 animate-pulse";
             if(id.startsWith("JAYQO/")) {
-                res.innerHTML = `<div class="text-white text-3xl mb-4 font-black italic">${id}</div><div class="text-green-400 font-bold uppercase">Fabric Sourcing</div>`;
+                res.innerHTML = `<div class="text-blue-500 text-[10px] font-bold mb-4 tracking-[0.5em]">JAYQO UNIT ACCESS</div><div class="text-white text-4xl font-black mb-4">${id}</div><div class="text-gray-400 font-bold uppercase tracking-widest">STATUS: AI ANALYSIS COMPLETED // FABRIC SOURCED</div>`;
             } else if(id.startsWith("KOEL/HCF/")) {
-                res.innerHTML = `<div class="text-white text-3xl mb-4 font-black italic">${id}</div><div class="text-blue-400 font-bold uppercase">Sewing Phase</div>`;
-            } else { res.innerHTML = `<div class="text-yellow-500 uppercase">Verification Pending...</div>`; }
+                res.innerHTML = `<div class="text-purple-500 text-[10px] font-bold mb-4 tracking-[0.5em]">KOEL MODISH ACCESS</div><div class="text-white text-4xl font-black mb-4">${id}</div><div class="text-gray-400 font-bold uppercase tracking-widest">STATUS: PRODUCTION IN PROGRESS // QA ACTIVE</div>`;
+            } else {
+                res.innerHTML = `<div class="text-yellow-500 text-xs font-bold uppercase tracking-widest">System Overload // Manual Verification Required for ${id}</div>`;
+            }
         }
     </script>
-
     <script async src="https://tally.so/widgets/embed.js"></script>
+    <!-- Botpress AI Script -->
     <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
     <script src="https://files.bpcontent.cloud/2026/05/31/00/20260531001126-F10XE7L5.js" defer></script>
 </body>
