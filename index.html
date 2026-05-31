@@ -3,155 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KOEL Group | Excellence in Textile & Innovation</title>
+    <title>KOEL Group | Excellence in Textile, Agro & Digital Health</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
-        .hero-section { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1558444458-5cd00bb12f1d?q=80&w=2070'); background-size: cover; background-position: center; }
-        .service-card:hover { transform: translateY(-5px); transition: 0.3s; }
+        .hero-section { background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1558444458-5cd00bb12f1d?q=80&w=2070'); background-size: cover; background-position: center; }
+        .logo-box img { height: 50px; width: auto; object-contain: contain; filter: grayscale(100%); transition: 0.3s; }
+        .logo-box img:hover { filter: grayscale(0%); transform: scale(1.1); }
     </style>
 </head>
 <body class="bg-white text-gray-800">
 
     <!-- Header & Navigation -->
-    <nav class="sticky top-0 bg-white shadow-sm z-50 px-6 py-4 flex justify-between items-center">
-        <div class="flex items-center space-x-2">
-            <span class="text-2xl font-extrabold text-green-700">KOEL <span class="text-gray-900">Group</span></span>
+    <nav class="sticky top-0 bg-white shadow-sm z-[100] px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center">
+            <img src="logo-main.png" alt="KOEL Group" class="h-12 w-auto" onerror="this.style.display='none'">
+            <span class="text-2xl font-extrabold text-green-700 ml-2">KOEL <span class="text-gray-900">Group</span></span>
         </div>
-        <div class="hidden lg:flex space-x-8 text-sm font-semibold">
+        <div class="hidden lg:flex space-x-8 text-sm font-semibold uppercase tracking-widest">
             <a href="#home" class="text-blue-600">Home</a>
             <a href="#about" class="hover:text-blue-600">About</a>
-            <a href="#services" class="hover:text-blue-600">Services</a>
             <a href="#companies" class="hover:text-blue-600">Companies</a>
+            <a href="#tracking" class="hover:text-blue-600">Tracking</a>
             <a href="#contact" class="hover:text-blue-600">Contact</a>
         </div>
-        <div class="flex space-x-4">
-            <i class="fab fa-linkedin hover:text-blue-600 cursor-pointer"></i>
-            <i class="fas fa-file-pdf hover:text-red-600 cursor-pointer"></i>
-        </div>
+        <a href="https://wa.me/8801970493357" class="bg-blue-600 text-white px-6 py-2 rounded-md font-bold text-xs hover:bg-blue-700 transition shadow-md">GET A QUOTE</a>
     </nav>
 
-    <!-- Hero Section (Image 1 Style) -->
-    <section id="home" class="hero-section h-[80vh] flex items-center justify-center text-center text-white px-6">
+    <!-- Hero Section -->
+    <section id="home" class="hero-section h-[85vh] flex items-center justify-center text-center text-white px-6">
         <div class="max-w-4xl">
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-6">Transforming Textile Waste into Global Wealth</h1>
-            <p class="text-lg md:text-xl opacity-90 mb-8 font-light leading-relaxed">Pioneer in the textile & garment industry with over 10 years of experience. Join Jayqo Textile & Accessories Ltd in pioneering a circular textile economy in Bangladesh.</p>
-            <a href="#about" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-md font-bold transition">Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i></a>
-        </div>
-    </section>
-
-    <!-- About & Family Logos (Image 3 Style) -->
-    <section id="about" class="py-20 px-6 bg-gray-50">
-        <div class="max-w-6xl mx-auto text-center">
-            <p class="text-gray-500 max-w-3xl mx-auto mb-16 leading-relaxed">Koel Group is a diversified Bangladeshi business operating for over 10 years across garments, sustainability, e-commerce, agri-tech, and digital health. Its flagship, Koel Modish Apparels, exports a wide range of apparel to 10+ countries.</p>
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-10 opacity-60">
-                <div class="text-center font-bold text-xs uppercase tracking-widest"><i class="fas fa-industry mb-2 text-2xl block"></i> Koel Modish Apparels</div>
-                <div class="text-center font-bold text-xs uppercase tracking-widest"><i class="fas fa-recycle mb-2 text-2xl block"></i> Jayqo Textiles</div>
-                <div class="text-center font-bold text-xs uppercase tracking-widest"><i class="fas fa-shopping-bag mb-2 text-2xl block"></i> Koel Shop</div>
-                <div class="text-center font-bold text-xs uppercase tracking-widest"><i class="fas fa-leaf mb-2 text-2xl block"></i> Anisha Agricultural</div>
-                <div class="text-center font-bold text-xs uppercase tracking-widest"><i class="fas fa-hospital mb-2 text-2xl block"></i> Arham Digital Health</div>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">Transforming Textile Waste <br> into Global Wealth</h1>
+            <p class="text-lg md:text-xl opacity-90 mb-10 font-light max-w-2xl mx-auto">Pioneer in the textile & garment industry with over 10 years of experience. Pioneering a circular textile economy in Bangladesh.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#companies" class="bg-white text-blue-900 px-10 py-4 rounded-md font-bold hover:bg-gray-100 transition">Our Portfolio</a>
+                <a href="#tracking" class="border border-white text-white px-10 py-4 rounded-md font-bold hover:bg-white/10 transition">Track Production</a>
             </div>
         </div>
     </section>
 
-    <!-- Our Core Services (Image 4 Style) -->
-    <section id="services" class="py-20 px-6 max-w-7xl mx-auto">
+    <!-- Our Family of Companies (Image Logos) -->
+    <section id="companies" class="py-20 px-6 bg-gray-50 border-b">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-gray-400 text-[10px] font-bold uppercase tracking-[0.4em] mb-12 italic">Our Family of Companies</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 items-center logo-box">
+                <img src="logo-modish.png" alt="Koel Modish Apparels">
+                <img src="logo-jayqo.png" alt="Jayqo Textiles">
+                <img src="logo-anisha.png" alt="Anisha Agro">
+                <img src="logo-arham.png" alt="Arham Health">
+                <div class="text-center font-bold text-xs text-gray-400 uppercase tracking-widest">KOEL Shop</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Tracking Box (New & Smart) -->
+    <section id="tracking" class="py-24 px-6 bg-white">
+        <div class="max-w-4xl mx-auto p-12 rounded-3xl border-2 border-blue-50 text-center shadow-2xl bg-gray-50">
+            <h2 class="text-3xl font-black text-gray-900 mb-4 uppercase italic">Live Production Tracker</h2>
+            <p class="text-gray-500 mb-10 text-xs font-bold tracking-widest uppercase">Authorized Tracking for Partners</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <input type="text" id="orderID" placeholder="ID (e.g. KOEL/HCF/2026)" class="bg-white border-2 border-gray-200 px-8 py-4 rounded-xl text-gray-900 focus:outline-none focus:border-blue-500 w-full md:w-[400px] font-bold text-center">
+                <button onclick="trackOrder()" class="bg-blue-600 text-white px-10 py-4 rounded-xl font-black tracking-widest hover:bg-blue-700 transition">EXECUTE</button>
+            </div>
+            <div id="statusResult" class="mt-10 hidden p-8 bg-white rounded-2xl border border-blue-100 text-center shadow-inner transition-all duration-500"></div>
+        </div>
+    </section>
+
+    <!-- Core Services Section -->
+    <section class="py-24 px-6 max-w-7xl mx-auto">
         <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold mb-4">Our Core Services</h2>
-            <p class="text-gray-500">A diverse portfolio of services driving innovation and sustainability across industries.</p>
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-4 tracking-tighter">Our Core Services</h2>
+            <div class="w-20 h-1 bg-green-600 mx-auto"></div>
         </div>
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 service-card">
-                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6"><i class="fas fa-tshirt"></i></div>
-                <h3 class="text-xl font-bold mb-3">Export Ready Garment</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">Based on buyers requirements, exporting ready made garments and earn foreign currency for Bangladesh.</p>
+            <div class="p-10 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl transition">
+                <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 text-2xl mb-8"><i class="fas fa-tshirt"></i></div>
+                <h3 class="text-xl font-bold mb-4">Export Ready Garment</h3>
+                <p class="text-gray-500 text-sm leading-loose">Premium sourcing and export of knit & woven garments to international markets with full compliance.</p>
             </div>
-            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 service-card">
-                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6"><i class="fas fa-shopping-cart"></i></div>
-                <h3 class="text-xl font-bold mb-3">Ecommerce Portal</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">A full featured ecommerce business with a vision to deliver export quality & fashionable clothes.</p>
+            <div class="p-10 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl transition">
+                <div class="w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center text-green-600 text-2xl mb-8"><i class="fas fa-leaf"></i></div>
+                <h3 class="text-xl font-bold mb-4">Circular Sourcing</h3>
+                <p class="text-gray-500 text-sm leading-loose">Jayqo Textiles focuses on sustainable manufacturing and textile waste management strategies.</p>
             </div>
-            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 service-card">
-                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6"><i class="fas fa-boxes"></i></div>
-                <h3 class="text-xl font-bold mb-3">Bulk Cloth Order</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">We deliver to any local or foreign reseller or distributor for any amount of bulk order.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mission & Vision (Image 5 Style) -->
-    <section class="py-20 px-6 bg-gray-50">
-        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
-            <div class="bg-white p-10 rounded-2xl shadow-sm text-center">
-                <i class="fas fa-rocket text-blue-500 text-3xl mb-6"></i>
-                <h3 class="text-2xl font-bold mb-4">Our Mission</h3>
-                <p class="text-gray-500 text-sm leading-loose">To integrate MSMEs into a smart green factory network, transforming textile waste into sustainable products through digital traceability.</p>
-            </div>
-            <div class="bg-white p-10 rounded-2xl shadow-sm text-center">
-                <i class="fas fa-eye text-blue-500 text-3xl mb-6"></i>
-                <h3 class="text-2xl font-bold mb-4">Our Vision</h3>
-                <p class="text-gray-500 text-sm leading-loose">To revolutionize the RMG sector through circular economy principles, creating a resilient, compliant, and sustainable textile ecosystem.</p>
+            <div class="p-10 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl transition">
+                <div class="w-16 h-16 bg-purple-50 rounded-2xl flex items-center justify-center text-purple-600 text-2xl mb-8"><i class="fas fa-stethoscope"></i></div>
+                <h3 class="text-xl font-bold mb-4">Digital Health Core</h3>
+                <p class="text-gray-500 text-sm leading-loose">Arham Digital Health Center provides next-gen tech solutions for the healthcare ecosystem in Bangladesh.</p>
             </div>
         </div>
     </section>
 
-    <!-- Inquiry Form (Tally Integration) -->
-    <section id="contact" class="py-20 px-6 max-w-5xl mx-auto">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold mb-2">Connect with KOEL Group</h2>
-            <p class="text-gray-500">Submit your requirements and our team will get back to you.</p>
-        </div>
-        <div class="rounded-2xl border border-gray-200 overflow-hidden h-[600px] shadow-lg">
-            <iframe data-tally-src="https://tally.so/embed/VLD1by?hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="100%" frameborder="0" title="KOEL Sync"></iframe>
+    <!-- Inquiry & CRM Sync (Tally) -->
+    <section id="contact" class="py-24 px-6 bg-gray-50">
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+            <div>
+                <h2 class="text-5xl font-black text-gray-900 mb-8 tracking-tighter leading-none italic uppercase">Connect <br> to Global Hub.</h2>
+                <p class="text-gray-500 text-sm leading-relaxed mb-10">Your inquiry will be synced directly to our master database for instant merchandiser assignment.</p>
+                <div class="flex items-center space-x-4"><p class="text-gray-900 font-black tracking-widest text-lg">+880 1970-493357</p></div>
+            </div>
+            <div class="bg-white p-2 rounded-[2rem] shadow-2xl border border-gray-100 overflow-hidden h-[600px]">
+                <iframe data-tally-src="https://tally.so/embed/VLD1by?hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="100%" frameborder="0" title="KOEL Sync"></iframe>
+            </div>
         </div>
     </section>
 
-    <!-- Footer (Image 7 Style) -->
-    <footer class="bg-white border-t border-gray-100 pt-20 pb-10 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12 mb-16">
-            <div>
-                <h3 class="text-green-700 text-xl font-bold mb-6">KOEL Group</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">Pioneering excellence and sustainable growth in the global textile, agriculture, and health industries.</p>
-            </div>
-            <div>
-                <h4 class="font-bold mb-6 uppercase text-xs tracking-widest">Quick Links</h4>
-                <ul class="text-gray-500 text-sm space-y-3">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-bold mb-6 uppercase text-xs tracking-widest">Our Companies</h4>
-                <ul class="text-gray-500 text-sm space-y-3">
-                    <li>Koel Modish Apparels</li>
-                    <li>Jayqo Textiles</li>
-                    <li>Koel Shop</li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-bold mb-6 uppercase text-xs tracking-widest">Contact Us</h4>
-                <p class="text-gray-500 text-sm leading-relaxed">
-                    Plot-12, Sector-07, Uttara, Dhaka-1230.<br>
-                    Email: md@koelgroupbd.com<br>
-                    WhatsApp: +880 1970493357
-                </p>
-            </div>
+    <!-- Footer -->
+    <footer class="py-16 bg-white border-t border-gray-100 text-center">
+        <p class="text-[9px] font-bold text-gray-400 uppercase tracking-[0.5em] mb-8">&copy; 2025 KOEL Group. Global Operations Active.</p>
+        <div class="flex justify-center space-x-8 text-gray-400">
+            <a href="#" class="hover:text-blue-600 transition text-xl"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="hover:text-pink-600 transition text-xl"><i class="fab fa-instagram"></i></a>
         </div>
-        <p class="text-center text-gray-400 text-xs border-t border-gray-50 pt-10">&copy; 2025 Koel Group. All rights reserved.</p>
     </footer>
 
-    <!-- চ্যাট বাটন (WhatsApp & AI) -->
-    <div class="fixed bottom-10 right-10 z-[100] flex flex-col space-y-4">
-        <a href="https://wa.me/8801970493357" class="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition"><i class="fab fa-whatsapp text-2xl"></i></a>
+    <!-- Smart Actions -->
+    <div class="fixed bottom-10 left-10 z-[100] flex flex-col space-y-4">
+        <a href="https://wa.me/8801970493357" class="w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center text-3xl shadow-xl hover:scale-110 transition"><i class="fab fa-whatsapp"></i></a>
     </div>
 
     <!-- Scripts -->
+    <script>
+        function trackOrder() {
+            const id = document.getElementById('orderID').value.toUpperCase().trim();
+            const res = document.getElementById('statusResult');
+            res.classList.remove('hidden');
+            if(id === "") { res.innerHTML = "<span class='text-red-500 font-bold'>ERROR: NULL ID</span>"; return; }
+            res.className = "mt-10 p-10 bg-white rounded-2xl border-2 border-blue-500 text-center font-bold tracking-widest uppercase text-blue-700";
+            if(id.startsWith("JAYQO/")) {
+                res.innerHTML = `<div class="text-gray-400 text-[10px] mb-2 tracking-[0.3em]">JAYQO FACTORY UNIT</div><div class="text-2xl mb-4">${id}</div><div>STATUS: FABRIC SOURCING ACTIVE</div>`;
+            } else if(id.startsWith("KOEL/HCF/")) {
+                res.innerHTML = `<div class="text-gray-400 text-[10px] mb-2 tracking-[0.3em]">KOEL MODISH UNIT</div><div class="text-2xl mb-4">${id}</div><div>STATUS: SEWING & QUALITY CHECK</div>`;
+            } else {
+                res.innerHTML = `<div class="text-yellow-500 italic">ID NOT RECOGNIZED // MANUAL SYNC REQUIRED</div>`;
+            }
+        }
+    </script>
     <script async src="https://tally.so/widgets/embed.js"></script>
     <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
     <script src="https://files.bpcontent.cloud/2026/05/31/00/20260531001125-FWNWLKB0.js" defer></script>
-
 </body>
 </html>
