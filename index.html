@@ -19,10 +19,11 @@
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-[100] glass border-b border-white/5 px-6 py-4 flex justify-between items-center">
         <div class="flex items-center space-x-3">
-            <div class="w-10 h-10 gradient-blue rounded-xl flex items-center justify-center font-extrabold text-white text-xl shadow-lg">K</div>
+            <!-- আপনার লোগো এখানে বসবে (নিশ্চিত করুন গিটহাবে logo.png আপলোড করেছেন) -->
+            <img src="logo.png" alt="KOEL Logo" class="h-10 w-auto object-contain">
             <div class="flex flex-col">
                 <span class="text-lg font-extrabold tracking-tighter text-white leading-none uppercase">KOEL GROUP <span class="text-blue-500">BD</span></span>
-                <span class="text-[7px] uppercase tracking-[0.4em] text-blue-400 font-bold mt-1">AI Smart Automation Active</span>
+                <span class="text-[7px] uppercase tracking-[0.4em] text-blue-400 font-bold mt-1">Smart Automation Active</span>
             </div>
         </div>
         <div class="hidden lg:flex space-x-8 text-[10px] font-bold uppercase tracking-widest text-gray-500">
@@ -47,19 +48,19 @@
         </div>
     </section>
 
-    <!-- Production Tracking -->
+    <!-- Smart Tracking System -->
     <section id="tracking" class="py-24 px-6">
         <div class="max-w-4xl mx-auto glass p-12 rounded-[3rem] text-center border border-white/5 shadow-2xl">
-            <h2 class="text-3xl font-black text-white mb-8 uppercase italic">Live Order Tracker</h2>
+            <h2 class="text-3xl font-black text-white mb-8 uppercase italic text-center">Live Order Tracker</h2>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
                 <input type="text" id="orderID" placeholder="ID (e.g. KOEL/HCF/)" class="bg-white/5 border border-white/10 px-8 py-5 rounded-2xl text-white outline-none focus:border-blue-500 w-full md:w-[400px] font-bold tracking-widest uppercase">
                 <button onclick="trackOrder()" class="gradient-blue text-white px-10 py-5 rounded-2xl font-black tracking-widest transition shadow-lg">TRACK</button>
             </div>
-            <div id="statusResult" class="mt-12 hidden p-8 bg-blue-500/10 rounded-[2.5rem] border border-blue-500/10 text-center"></div>
+            <div id="statusResult" class="mt-12 hidden p-8 bg-blue-500/5 rounded-[2.5rem] border border-blue-500/10 text-center"></div>
         </div>
     </section>
 
-    <!-- NEW Tally Inquiry Section -->
+    <!-- Inquiry Section with Tally Form -->
     <section id="contact" class="py-24 px-6 bg-white/[0.01]">
         <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
             <div>
@@ -71,7 +72,7 @@
                 </div>
             </div>
             
-            <!-- Tally Form Embed -->
+            <!-- Tally Form Embed - সঠিক আইডি EkMJG2 দিয়ে সেট করা -->
             <div class="glass p-2 rounded-[3rem] border-t-4 border-blue-600/50 overflow-hidden h-[600px] shadow-2xl">
                 <iframe 
                     data-tally-src="https://tally.so/embed/EkMJG2?hideTitle=1&transparentBackground=1&dynamicHeight=1" 
@@ -81,15 +82,23 @@
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="py-20 text-center glass border-t border-white/5">
+        <p class="text-[9px] font-bold text-gray-600 uppercase tracking-[0.6em] mb-4">&copy; 2025 KOEL GROUP BD. Global Operations Active.</p>
+    </footer>
+
     <!-- Smart WhatsApp Widget -->
-    <div class="fixed bottom-10 left-10 z-[100]">
+    <div class="fixed bottom-10 right-10 z-[100]">
         <div id="wa-card" class="hidden glass rounded-[3rem] mb-6 w-80 shadow-2xl overflow-hidden border border-white/10">
             <div class="gradient-blue p-8 text-white">
                 <p class="text-xl font-black italic uppercase">WhatsApp Desk</p>
             </div>
             <div class="p-6 bg-[#050810] space-y-3">
-                <a href="https://wa.me/8801970493357" class="block w-full glass p-4 rounded-xl text-[10px] font-black hover:bg-white/5 transition flex justify-between items-center text-white border border-white/5 uppercase tracking-widest">
-                    <span>START CHAT</span> <i class="fas fa-chevron-right text-blue-500"></i>
+                <a href="https://wa.me/8801970493357?text=Hi, JAYQO Factory Inquiry" class="block w-full glass p-4 rounded-xl text-[10px] font-black hover:bg-white/5 transition flex justify-between items-center text-white border border-white/5 uppercase tracking-widest">
+                    <span>JAYQO UNIT</span> <i class="fas fa-chevron-right text-blue-500"></i>
+                </a>
+                <a href="https://wa.me/8801970493357?text=Hi, KOEL MODISH Inquiry" class="block w-full glass p-4 rounded-xl text-[10px] font-black hover:bg-white/5 transition flex justify-between items-center text-white border border-white/5 uppercase tracking-widest">
+                    <span>KOEL UNIT</span> <i class="fas fa-chevron-right text-blue-500"></i>
                 </a>
             </div>
         </div>
@@ -98,7 +107,7 @@
         </button>
     </div>
 
-    <!-- Scripts -->
+    <!-- Scripts for Logic & Bots -->
     <script>
         function trackOrder() {
             const id = document.getElementById('orderID').value.toUpperCase().trim();
@@ -123,6 +132,9 @@
     <!-- Tally Widget Script -->
     <script async src="https://tally.so/widgets/embed.js"></script>
 
- <!-- 🔥 UPDATED BOTPRESS SMART DESK SCRIPT 🔥 -->
-<script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
-<script src="https://files.bpcontent.cloud/2026/05/31/00/20260531001126-F10XE7L5.js" defer></script>
+    <!-- Botpress AI Smart Desk Script -->
+    <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2026/05/31/00/20260531001126-F10XE7L5.js" defer></script>
+
+</body>
+</html>
